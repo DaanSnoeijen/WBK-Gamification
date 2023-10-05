@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class MessageCreator : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class MessageCreator : MonoBehaviour
     [Header("Message prefabs")]
     [SerializeField] GameObject InnoMessage;
     [SerializeField] GameObject UserMessage;
+
+    float scrollBottomPosition = 0;
 
     private void Start()
     {
@@ -32,20 +35,32 @@ public class MessageCreator : MonoBehaviour
     public void CreateInnoMessage(string text)
     {
         GameObject message = Instantiate(InnoMessage, ScrollViewContent.transform);
-
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
         Canvas.ForceUpdateCanvases();
-        ScrollViewRect.verticalNormalizedPosition = 0;
+        message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
+        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+
+        SetScrollBottom();
     }
 
     public void CreateUserMessage(string text)
     {
         GameObject message = Instantiate(UserMessage, ScrollViewContent.transform);
-
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
         Canvas.ForceUpdateCanvases();
-        ScrollViewRect.verticalNormalizedPosition = 0;
+        message.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
+        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+
+        SetScrollBottom();
+    }
+
+    void SetScrollBottom()
+    {
+        ScrollViewRect.content.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
+        ScrollViewRect.content.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+
+        ScrollViewRect.verticalNormalizedPosition = scrollBottomPosition;
     }
 }
