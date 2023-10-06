@@ -13,7 +13,7 @@ public class SurveyManager : MonoBehaviour
     [SerializeField] InputManager InputManager;
 
     [Header("Progress tracker")]
-    [SerializeField] Image ProgressBar;
+    [SerializeField] ProgressBarSetter ProgressBarSetter;
 
     int listId = 0;
 
@@ -25,13 +25,13 @@ public class SurveyManager : MonoBehaviour
     public void NextMessage()
     {
         InputManager.ToggleSending(false);
-        ProgressBar.fillAmount = (float)listId / _questions.Count;
+        ProgressBarSetter.SetProgressBar((float)listId / _questions.Count);
         listId++;
 
         if (listId <= _questions.Count) StartCoroutine(ShowMessage());
         else 
         {
-            ProgressBar.fillAmount = 1f;
+            ProgressBarSetter.SetProgressBar(1f);
             //End survey
         }
     }
@@ -40,7 +40,7 @@ public class SurveyManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
 
-        GameObject loadMessage = MessageCreator.CreateInnoMessage(". . .");
+        GameObject loadMessage = MessageCreator.CreateInnoTyping();
         yield return new WaitForSeconds(2f);
         Destroy(loadMessage);
 

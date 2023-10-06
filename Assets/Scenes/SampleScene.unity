@@ -1089,7 +1089,7 @@ GameObject:
   - component: {fileID: 631572259}
   - component: {fileID: 631572258}
   m_Layer: 0
-  m_Name: SurveyManager
+  m_Name: SURVEY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1112,11 +1112,18 @@ MonoBehaviour:
     text: Bedankt dat je meedoet!
   - type: 0
     text: Wat vind je van de sportaccomodaties in jouw wijk?
+  - type: 0
+    text: En hoevaak maak jij gebruik van deze accomodaties?
   - type: 1
-    text: Bedankt voor je reactie!
+    text: Bedankt voor je eerlijkheid!
+  - type: 0
+    text: Zijn er sport gerelateerde dingen die jij graag nog terug zou willen zien
+      in jouw wijk?
+  - type: 1
+    text: Toppie, bedankt voor de samenwerking! Jou antwoorden helpen ons enorm!
   MessageCreator: {fileID: 1476029144}
   InputManager: {fileID: 443404547}
-  ProgressBar: {fileID: 1070130892}
+  ProgressBarSetter: {fileID: 1837687433}
 --- !u!4 &631572259
 Transform:
   m_ObjectHideFlags: 0
@@ -1343,6 +1350,7 @@ GameObject:
   - component: {fileID: 1070130891}
   - component: {fileID: 1070130893}
   - component: {fileID: 1070130892}
+  - component: {fileID: 1070130894}
   m_Layer: 5
   m_Name: Filler
   m_TagString: Untagged
@@ -1408,6 +1416,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070130890}
   m_CullTransparentMesh: 1
+--- !u!95 &1070130894
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070130890}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af314114876bdbf48bc7953373beaa03, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1297634588
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,6 +1725,7 @@ MonoBehaviour:
   ScrollViewRect: {fileID: 135902521}
   ScrollViewContent: {fileID: 1872064321}
   InnoMessage: {fileID: 5900494448532079184, guid: 6c212d026c9854d44a4f444ea51ffec5, type: 3}
+  InnoTyping: {fileID: 5900494448532079184, guid: 04113069adb66ef43898827dbfa21c42, type: 3}
   UserMessage: {fileID: 5900494448532079184, guid: c6c5df8715f4fe4479692e24771bd1fe, type: 3}
 --- !u!1 &1548828352
 GameObject:
@@ -2262,6 +2292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837687432}
+  - component: {fileID: 1837687433}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -2292,6 +2323,19 @@ RectTransform:
   m_AnchoredPosition: {x: -2.5274048, y: -404.5}
   m_SizeDelta: {x: 31.611, y: 1005.1807}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1837687433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837687431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8effd19f327c8cd4eaff1ec201735bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProgressBar: {fileID: 1070130892}
 --- !u!1 &1872064321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2363,7 +2407,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 20
   m_ChildAlignment: 0
-  m_Spacing: 30
+  m_Spacing: 60
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0

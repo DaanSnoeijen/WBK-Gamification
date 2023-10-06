@@ -12,14 +12,26 @@ public class MessageCreator : MonoBehaviour
 
     [Header("Message prefabs")]
     [SerializeField] GameObject InnoMessage;
+    [SerializeField] GameObject InnoTyping;
     [SerializeField] GameObject UserMessage;
 
     float scrollBottomPosition = 0;
 
-    public GameObject CreateInnoMessage(string text)
+    public void CreateInnoMessage(string text)
     {
         GameObject message = Instantiate(InnoMessage, ScrollViewContent.transform);
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
+
+        Canvas.ForceUpdateCanvases();
+        message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
+        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+
+        SetScrollBottom();
+    }
+
+    public GameObject CreateInnoTyping()
+    {
+        GameObject message = Instantiate(InnoTyping, ScrollViewContent.transform);
 
         Canvas.ForceUpdateCanvases();
         message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
