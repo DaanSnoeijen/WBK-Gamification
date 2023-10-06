@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour
     Color ButtonOnColor = new Color(0f, 0.635f, 0.909f);
     Color ButtonOffColor = new Color(0.29f, 0.29f, 0.29f);
 
-    Color ButtonBackOnColor = new Color(0.247f, 0.282f, 0.8f);
+    Color ButtonBackOnColor = new Color(0.247f, 0.45f, 0.8f);
     Color ButtonBackOffColor = new Color(0.211f, 0.211f, 0.211f);
 
     public void SendUserMessage()

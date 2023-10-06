@@ -16,22 +16,7 @@ public class MessageCreator : MonoBehaviour
 
     float scrollBottomPosition = 0;
 
-    private void Start()
-    {
-        CreateInnoMessage("Test 1");
-        CreateUserMessage("Test 2");
-        CreateInnoMessage("Test 3");
-        CreateInnoMessage("Lange tekst test. Lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
-            "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, " +
-            "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.");
-        CreateUserMessage("Test 2");
-        CreateInnoMessage("Test 3");
-        CreateInnoMessage("Test 1");
-        CreateUserMessage("Test 2");
-        CreateInnoMessage("Test 3");
-    }
-
-    public void CreateInnoMessage(string text)
+    public GameObject CreateInnoMessage(string text)
     {
         GameObject message = Instantiate(InnoMessage, ScrollViewContent.transform);
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
@@ -41,6 +26,7 @@ public class MessageCreator : MonoBehaviour
         message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
 
         SetScrollBottom();
+        return message;
     }
 
     public void CreateUserMessage(string text)
