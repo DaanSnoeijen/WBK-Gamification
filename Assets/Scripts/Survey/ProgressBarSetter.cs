@@ -14,9 +14,9 @@ public class ProgressBarSetter : MonoBehaviour
 
     int loopRate = 80;
 
-    public void SetProgressBar(float newValue) { StartCoroutine(ProgressBarAnim(newValue)); }
+    public void SetProgressBar(float newValue) { StartCoroutine(IProgressBarAnim(newValue)); }
 
-    IEnumerator ProgressBarAnim(float newValue)
+    IEnumerator IProgressBarAnim(float newValue)
     {
         for (int i = 0; i < loopRate; i++)
         {

@@ -28,7 +28,7 @@ public class SurveyManager : MonoBehaviour
         ProgressBarSetter.SetProgressBar((float)listId / _questions.Count);
         listId++;
 
-        if (listId <= _questions.Count) StartCoroutine(ShowMessage());
+        if (listId <= _questions.Count) StartCoroutine(IShowMessage());
         else 
         {
             ProgressBarSetter.SetProgressBar(1f);
@@ -36,7 +36,7 @@ public class SurveyManager : MonoBehaviour
         }
     }
 
-    IEnumerator ShowMessage()
+    IEnumerator IShowMessage()
     {
         yield return new WaitForSeconds(.8f);
 
