@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -6.6}
-  m_SizeDelta: {x: 1, y: 0.50000024}
+  m_AnchoredPosition: {x: 0, y: -8.174999}
+  m_SizeDelta: {x: 10.500047, y: 3.6499996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2734647
 MonoBehaviour:
@@ -897,7 +897,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 1
-    text: Bedankt dat je meedoet!
+    text: Bedankt!
   - type: 0
     text: Wat vind je van de sportaccomodaties in jouw wijk?
   - type: 0
@@ -1120,7 +1120,7 @@ MonoBehaviour:
     text: Zijn er sport gerelateerde dingen die jij graag nog terug zou willen zien
       in jouw wijk?
   - type: 1
-    text: Toppie, bedankt voor de samenwerking! Jou antwoorden helpen ons enorm!
+    text: Toppie, bedankt voor de samenwerking! Jouw antwoorden helpen ons enorm!
   MessageCreator: {fileID: 1476029144}
   InputManager: {fileID: 443404547}
   ProgressBarSetter: {fileID: 1837687433}
@@ -1647,7 +1647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.98039216, g: 0.4117647, b: 0.09803922, a: 1}
+  m_Color: {r: 0.99607843, g: 0.36078432, b: 0.003921569, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1762,8 +1762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.09653473, y: -6.0999985}
-  m_SizeDelta: {x: -0.1930008, y: -1.9949989}
+  m_AnchoredPosition: {x: 0.00009918213, y: -6.1870003}
+  m_SizeDelta: {x: 12.0949, y: 10.379}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548828354
 MonoBehaviour:
@@ -2090,7 +2090,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.8832222, y: 0.036124997}
   m_AnchorMax: {x: 0.975, y: 0.08065625}
-  m_AnchoredPosition: {x: 0.000030517578, y: -12.215027}
+  m_AnchoredPosition: {x: 0.000030517578, y: -7.5}
   m_SizeDelta: {x: 14.101, y: 24.5576}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1732782946
@@ -2128,8 +2128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07538889, y: 0.89400005}
   m_AnchorMax: {x: 0.21516669, y: 0.957}
-  m_AnchoredPosition: {x: -10, y: 0.000076293945}
-  m_SizeDelta: {x: 1.0953, y: 21.594}
+  m_AnchoredPosition: {x: -12.812012, y: 13.350006}
+  m_SizeDelta: {x: -25.6249, y: -1.6408}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1743654844
 GameObject:

@@ -38,10 +38,10 @@ public class SurveyManager : MonoBehaviour
 
     IEnumerator ShowMessage()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.8f);
 
         GameObject loadMessage = MessageCreator.CreateInnoTyping();
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.4f);
         Destroy(loadMessage);
 
         MessageCreator.CreateInnoMessage(_questions[listId - 1].text);
