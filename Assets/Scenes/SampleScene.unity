@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 1
-    text: Bedankt!
+    text: Bedankt dat je meedoet!
   - type: 0
     text: Wat vind je van de sportaccomodaties in jouw wijk?
   - type: 0

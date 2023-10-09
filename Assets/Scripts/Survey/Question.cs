@@ -15,5 +15,6 @@ public class Question
     public MessageType type;
 
     [Header("What will the text in the message be?")]
+    [TextArea(3, 20)]
     public string text;
 }
