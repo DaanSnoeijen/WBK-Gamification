@@ -17,6 +17,9 @@ public class SurveyManager : MonoBehaviour
 
     int listId = 0;
 
+    float waitInBetween = 0.8f;
+    float waitTyping = 2f;
+
     private void Start()
     {
         NextMessage();
@@ -38,16 +41,17 @@ public class SurveyManager : MonoBehaviour
 
     IEnumerator IShowMessage()
     {
-        yield return new WaitForSeconds(.8f);
+        yield return new WaitForSeconds(waitInBetween);
 
         GameObject loadMessage = MessageCreator.CreateInnoTyping();
-        yield return new WaitForSeconds(1.4f);
+        yield return new WaitForSeconds(waitTyping);
         Destroy(loadMessage);
 
-        MessageCreator.CreateInnoMessage(_questions[listId - 1].text);
+        Question question = _questions[listId - 1];
+        MessageCreator.CreateInnoMessage(question.text, question.type);
 
-        if (_questions[listId - 1].type == MessageType.Encouragement ||
-            _questions[listId - 1].type == MessageType.Gift) NextMessage();
+        if (question.type == MessageType.Encouragement ||
+            question.type == MessageType.Gift) NextMessage();
         else InputManager.ToggleSending(true);
     }
 }

@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class MessageCreator : MonoBehaviour
 {
@@ -13,31 +16,27 @@ public class MessageCreator : MonoBehaviour
     [Header("Message prefabs")]
     [SerializeField] GameObject InnoMessage;
     [SerializeField] GameObject InnoTyping;
+    [SerializeField] GameObject InnoGift;
     [SerializeField] GameObject UserMessage;
 
     float scrollBottomPosition = 0;
 
-    public void CreateInnoMessage(string text)
+    public void CreateInnoMessage(string text, MessageType type)
     {
-        GameObject message = Instantiate(InnoMessage, ScrollViewContent.transform);
+        GameObject message;
+
+        if (type == MessageType.Gift) message = Instantiate(InnoGift, ScrollViewContent.transform);
+        else message = Instantiate(InnoMessage, ScrollViewContent.transform);
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
-        Canvas.ForceUpdateCanvases();
-        message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
-        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
-
-        SetScrollBottom();
+        SetScrollBottom(message, false);
     }
 
     public GameObject CreateInnoTyping()
     {
         GameObject message = Instantiate(InnoTyping, ScrollViewContent.transform);
 
-        Canvas.ForceUpdateCanvases();
-        message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
-        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
-
-        SetScrollBottom();
+        SetScrollBottom(message, false);
         return message;
     }
 
@@ -46,15 +45,16 @@ public class MessageCreator : MonoBehaviour
         GameObject message = Instantiate(UserMessage, ScrollViewContent.transform);
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
-        Canvas.ForceUpdateCanvases();
-        message.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
-        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
-
-        SetScrollBottom();
+        SetScrollBottom(message, true);
     }
 
-    void SetScrollBottom()
+    void SetScrollBottom(GameObject message, bool layoutGroupVertical)
     {
+        Canvas.ForceUpdateCanvases();
+        if (layoutGroupVertical) message.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
+        else message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
+        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+
         ScrollViewRect.content.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
         ScrollViewRect.content.GetComponent<ContentSizeFitter>().SetLayoutVertical();
 
