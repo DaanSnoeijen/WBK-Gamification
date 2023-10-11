@@ -1581,7 +1581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 2
+  - type: 1
     text: Bedankt dat je meedoet, jouw mening bepaald de toekomst van je wijk!
   - type: 1
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen voordat je
@@ -1595,8 +1595,10 @@ MonoBehaviour:
   - type: 0
     text: Zijn er sport gerelateerde dingen die jij graag nog terug zou willen zien
       in jouw wijk?
+  - type: 0
+    text: Kun je ons vertellen waarom?
   - type: 1
-    text: Toppie, bedankt voor de samenwerking! Jouw antwoorden helpen ons enorm!
+    text: Top, bedankt voor de samenwerking! Jouw antwoorden helpen ons enorm!
   MessageCreator: {fileID: 1476029144}
   InputManager: {fileID: 443404547}
   ProgressBarSetter: {fileID: 1837687433}

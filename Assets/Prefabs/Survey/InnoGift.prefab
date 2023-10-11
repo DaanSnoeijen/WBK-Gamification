@@ -4389,7 +4389,7 @@ ParticleSystem:
     maxLights: 20
   TrailModule:
     enabled: 0
-    mode: 0
+    mode: 1
     ratio: 1
     lifetime:
       serializedVersion: 2
@@ -4450,7 +4450,7 @@ ParticleSystem:
     shadowBias: 0.5
     worldSpace: 0
     dieWithParticles: 1
-    sizeAffectsWidth: 1
+    sizeAffectsWidth: 0
     sizeAffectsLifetime: 0
     inheritParticleColor: 1
     generateLightingData: 0
@@ -5392,6 +5392,7 @@ MonoBehaviour:
   ClickMessage: {fileID: 7114318547820358560}
   Button: {fileID: 3625836208979410372}
   CoinsEffect: {fileID: 4382653374861647749}
+  PressEffect: {fileID: 0}
 --- !u!1 &7114318547820358560
 GameObject:
   m_ObjectHideFlags: 0
