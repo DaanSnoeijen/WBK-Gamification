@@ -32,11 +32,7 @@ public class SurveyManager : MonoBehaviour
         listId++;
 
         if (listId <= _questions.Count) StartCoroutine(IShowMessage());
-        else 
-        {
-            ProgressBarSetter.SetProgressBar(1f);
-            //End survey
-        }
+        else ProgressBarSetter.SetProgressBar(1f);
     }
 
     IEnumerator IShowMessage()
@@ -51,7 +47,9 @@ public class SurveyManager : MonoBehaviour
         MessageCreator.CreateInnoMessage(question.text, question.type);
 
         if (question.type == MessageType.Encouragement ||
-            question.type == MessageType.Gift) NextMessage();
+            question.type == MessageType.Gift ||
+            question.type == MessageType.Finish) NextMessage();
+        else if (listId == _questions.Count) MessageCreator.CreateInnoMessage(question.text, MessageType.Finish);
         else InputManager.ToggleSending(true);
     }
 }

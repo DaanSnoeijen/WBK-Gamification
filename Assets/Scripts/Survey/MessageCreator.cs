@@ -14,6 +14,7 @@ public class MessageCreator : MonoBehaviour
     [SerializeField] GameObject InnoMessage;
     [SerializeField] GameObject InnoTyping;
     [SerializeField] GameObject InnoGift;
+    [SerializeField] GameObject InnoFinish;
     [SerializeField] GameObject UserMessage;
 
     float scrollBottomPosition = 0;
@@ -22,8 +23,21 @@ public class MessageCreator : MonoBehaviour
     {
         GameObject message;
 
-        if (type == MessageType.Gift) message = Instantiate(InnoGift, ScrollViewContent.transform);
-        else message = Instantiate(InnoMessage, ScrollViewContent.transform);
+        switch (type)
+        {
+            case MessageType.Gift:
+                message = Instantiate(InnoGift, ScrollViewContent.transform);
+                break;
+
+            case MessageType.Finish:
+                message = Instantiate(InnoFinish, ScrollViewContent.transform);
+                break;
+
+            default:
+                message = Instantiate(InnoMessage, ScrollViewContent.transform);
+                break;
+        }
+
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
         SetScrollBottom(message, false);

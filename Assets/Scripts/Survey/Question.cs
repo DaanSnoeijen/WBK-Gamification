@@ -5,7 +5,8 @@ using UnityEngine;
 public enum MessageType{
     OpenQuestion,
     Encouragement,
-    Gift
+    Gift,
+    Finish
 }
 
 [System.Serializable]
