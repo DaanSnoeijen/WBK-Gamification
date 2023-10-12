@@ -114,10 +114,6 @@ public class FortuneWheelManager : MonoBehaviour
 
             CircleBlock.SetActive(true);
             EndButton.SetActive(true);
-
-            var em = CoinsEffect.emission;
-			em.rateOverTime = 50;
-			CoinsEffect.Play();
         } else {
 			// Calculate current position using linear interpolation
 			float t = _currentLerpRotationTime / maxLerpRotationTime;
@@ -138,7 +134,10 @@ public class FortuneWheelManager : MonoBehaviour
 	private void RewardCoins (int awardCoins)
 	{
 		//Reward
-	}
+        var em = CoinsEffect.emission;
+        em.rateOverTime = awardCoins;
+        CoinsEffect.Play();
+    }
 }
 
 /**
