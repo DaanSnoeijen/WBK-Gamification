@@ -21,14 +21,7 @@ public class InputManager : MonoBehaviour
     Color ButtonBackOnColor = new Color(0.247f, 0.45f, 0.8f);
     Color ButtonBackOffColor = new Color(0.211f, 0.211f, 0.211f);
 
-    public void SendUserMessage()
-    {
-        if (InputField.text != "")
-        {
-            MessageCreator.CreateUserMessage(InputField.text);
-            InputField.text = "";
-        }
-    }
+    public void SendUserMessage() { MessageCreator.CreateUserMessage(InputField.text); }
 
     public void ToggleSending(bool state)
     {

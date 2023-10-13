@@ -54,7 +54,7 @@ public class MessageCreator : MonoBehaviour
     public void CreateUserMessage(string text)
     {
         GameObject message = Instantiate(UserMessage, ScrollViewContent.transform);
-        message.GetComponentInChildren<TextMeshProUGUI>().text = text;
+        message.GetComponentInChildren<TMP_InputField>().text = text;
 
         SetScrollBottom(message, true);
     }
