@@ -32,11 +32,12 @@ public class SurveyManager : MonoBehaviour
     public void NextMessage()
     {
         InputManager.ToggleSending(false);
-        ProgressBarSetter.SetProgressBar((float)listId / _questions.Count);
         listId++;
 
-        if (listId <= _questions.Count) StartCoroutine(IShowMessage());
-        else ProgressBarSetter.SetProgressBar(1f);
+        if (listId == _questions.Count) ProgressBarSetter.SetProgressBar(1f);
+        else ProgressBarSetter.SetProgressBar((float)listId / _questions.Count);
+
+        StartCoroutine(IShowMessage());
     }
 
     IEnumerator IShowMessage()
