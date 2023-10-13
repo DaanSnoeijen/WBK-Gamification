@@ -15,6 +15,10 @@ public class SurveyManager : MonoBehaviour
     [Header("Progress tracker")]
     [SerializeField] ProgressBarSetter ProgressBarSetter;
 
+    [Header("Exit button switch when finished")]
+    [SerializeField] GameObject ExitButton;
+    [SerializeField] GameObject EndButton;
+
     int listId = 0;
 
     float waitInBetween = 0.8f;
@@ -49,7 +53,12 @@ public class SurveyManager : MonoBehaviour
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.Gift ||
             question.type == MessageType.Finish) NextMessage();
-        else if (listId == _questions.Count) MessageCreator.CreateInnoMessage(question.text, MessageType.Finish);
+        else if (listId - 1 == _questions.Count)
+        {
+            MessageCreator.CreateInnoMessage(question.text, MessageType.Finish);
+            ExitButton.SetActive(false);
+            EndButton.SetActive(true);
+        }
         else InputManager.ToggleSending(true);
     }
 }
