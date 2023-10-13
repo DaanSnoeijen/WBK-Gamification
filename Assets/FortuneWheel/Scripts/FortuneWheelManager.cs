@@ -25,6 +25,9 @@ public class FortuneWheelManager : MonoBehaviour
     [Header("Coin effects")]
     [SerializeField] ParticleSystem CoinsEffect;
 
+    [Header("Update coins")]
+    [SerializeField] UpdateCoins UpdateCoins;
+
     [Header("Params for each sector")]
     [SerializeField] FortuneWheelSector[] Sectors;		// All sectors objects
 
@@ -133,10 +136,11 @@ public class FortuneWheelManager : MonoBehaviour
 	/// <param name="awardCoins">Coins for user</param>
 	private void RewardCoins (int awardCoins)
 	{
-		//Reward
         var em = CoinsEffect.emission;
         em.rateOverTime = awardCoins;
         CoinsEffect.Play();
+
+        UpdateCoins.ShowNewCoins(awardCoins);
     }
 }
 

@@ -5334,6 +5334,7 @@ MonoBehaviour:
   ClickMessage: {fileID: 7114318547820358560}
   Button: {fileID: 3625836208979410372}
   CoinsEffect: {fileID: 4382653374861647749}
+  UpdateCoins: {fileID: 0}
 --- !u!1 &7114318547820358560
 GameObject:
   m_ObjectHideFlags: 0
