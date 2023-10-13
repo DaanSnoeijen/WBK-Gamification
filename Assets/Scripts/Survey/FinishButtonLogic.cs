@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FinishButtonLogic : MonoBehaviour
 {
+    [Header("Rewards for finishing")]
+    [SerializeField] FinishRewards FinishRewards;
+
     [Header("End of survey animators")]
     [SerializeField] Animator BackAnimator;
     [SerializeField] Animator FinishAnimator;
@@ -47,5 +50,7 @@ public class FinishButtonLogic : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         FinishPanel.SetActive(false);
+
+        FinishRewards.GiveExperience(true, true);
     }
 }
