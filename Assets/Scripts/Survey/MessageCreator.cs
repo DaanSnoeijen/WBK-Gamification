@@ -17,6 +17,9 @@ public class MessageCreator : MonoBehaviour
     [SerializeField] GameObject InnoFinish;
     [SerializeField] GameObject UserMessage;
 
+    [Header("Add answers to survey checker")]
+    [SerializeField] SurveyChecker SurveyChecker;
+
     float scrollBottomPosition = 0;
 
     public void CreateInnoMessage(string text, MessageType type)
@@ -54,7 +57,9 @@ public class MessageCreator : MonoBehaviour
     public void CreateUserMessage(string text)
     {
         GameObject message = Instantiate(UserMessage, ScrollViewContent.transform);
-        message.GetComponentInChildren<TMP_InputField>().text = text;
+        TMP_InputField field = message.GetComponentInChildren<TMP_InputField>();
+        field.text = text;
+        SurveyChecker.AddUserText(field);
 
         SetScrollBottom(message, true);
     }

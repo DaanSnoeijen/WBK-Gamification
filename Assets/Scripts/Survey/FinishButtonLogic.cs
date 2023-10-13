@@ -7,6 +7,9 @@ public class FinishButtonLogic : MonoBehaviour
     [Header("Rewards for finishing")]
     [SerializeField] FinishRewards FinishRewards;
 
+    [Header("Check survey answers")]
+    [SerializeField] SurveyChecker SurveyChecker;
+
     [Header("End of survey animators")]
     [SerializeField] Animator BackAnimator;
     [SerializeField] Animator FinishAnimator;
@@ -23,6 +26,11 @@ public class FinishButtonLogic : MonoBehaviour
 
     IEnumerator IShowFinishScreen(bool show)
     {
+        if (!SurveyChecker.CheckAnswers())
+        {
+            yield break;
+        }
+
         if (show)
         {
             FocusBackpanel.SetActive(true);

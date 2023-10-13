@@ -48,17 +48,19 @@ public class SurveyManager : MonoBehaviour
         Destroy(loadMessage);
 
         Question question = _questions[listId - 1];
+        if (listId == _questions.Count)
+        {
+            MessageCreator.CreateInnoMessage(question.text, MessageType.Finish);
+            ExitButton.SetActive(false);
+            EndButton.SetActive(true);
+
+            yield break;
+        }
         MessageCreator.CreateInnoMessage(question.text, question.type);
 
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.Gift ||
             question.type == MessageType.Finish) NextMessage();
-        else if (listId - 1 == _questions.Count)
-        {
-            MessageCreator.CreateInnoMessage(question.text, MessageType.Finish);
-            ExitButton.SetActive(false);
-            EndButton.SetActive(true);
-        }
         else InputManager.ToggleSending(true);
     }
 }
