@@ -20,12 +20,12 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: {x: 0, y: 0, z: 0.0287323}
-        inSlope: {x: 0, y: 0, z: 15.78056}
-        outSlope: {x: 0, y: 0, z: 15.78056}
+        inSlope: {x: 0, y: 0, z: 8.281478}
+        outSlope: {x: 0, y: 0, z: 8.281478}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.2611886}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.17910458}
       - serializedVersion: 3
         time: 0.25
         value: {x: 0, y: 0, z: 1.5}
@@ -47,11 +47,11 @@ AnimationClip:
       - serializedVersion: 3
         time: 1
         value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 19.134674}
-        outSlope: {x: 0, y: 0, z: 19.134674}
+        inSlope: {x: 0, y: 0, z: 8.171108}
+        outSlope: {x: 0, y: 0, z: 8.171108}
         tangentMode: 0
         weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.2589934}
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.19846821}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -326,12 +326,12 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0.0287323
-        inSlope: 15.78056
-        outSlope: 15.78056
+        inSlope: 8.281478
+        outSlope: 8.281478
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.2611886
+        outWeight: 0.17910458
       - serializedVersion: 3
         time: 0.25
         value: 1.5
@@ -353,11 +353,11 @@ AnimationClip:
       - serializedVersion: 3
         time: 1
         value: 0
-        inSlope: 19.134674
-        outSlope: 19.134674
+        inSlope: 8.171108
+        outSlope: 8.171108
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.2589934
+        inWeight: 0.19846821
         outWeight: 0.33333334
       m_PreInfinity: 2
       m_PostInfinity: 2

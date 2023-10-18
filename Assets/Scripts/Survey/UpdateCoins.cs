@@ -37,6 +37,6 @@ public class UpdateCoins : MonoBehaviour
         PopupAnimator.SetTrigger("Hide");
         yield return new WaitForSeconds(1f);
 
-        PopupObject.SetActive(false);
+        //PopupObject.SetActive(false);
     }
 }
