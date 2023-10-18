@@ -60,8 +60,7 @@ public class SurveyManager : MonoBehaviour
         MessageCreator.CreateInnoMessage(question.text, question.type);
 
         if (question.type == MessageType.Encouragement ||
-            question.type == MessageType.Gift ||
             question.type == MessageType.DebugFinish) NextMessage();
-        else InputManager.ToggleSending(true);
+        else if (question.type != MessageType.Gift) InputManager.ToggleSending(true);
     }
 }

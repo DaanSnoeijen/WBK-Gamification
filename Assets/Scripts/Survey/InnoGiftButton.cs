@@ -20,5 +20,6 @@ public class InnoGiftButton : MonoBehaviour
         Button.enabled = false;
         CoinsEffect.Play();
         GetComponentInParent<UpdateCoins>().ShowNewCoins(15);
+        GetComponentInParent<GiftNextMessage>().NextMessage();
     }
 }

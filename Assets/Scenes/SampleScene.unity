@@ -11995,6 +11995,7 @@ GameObject:
   - component: {fileID: 1872064324}
   - component: {fileID: 1872064323}
   - component: {fileID: 1872064325}
+  - component: {fileID: 1872064326}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -12083,6 +12084,19 @@ MonoBehaviour:
   FocusBackpanel: {fileID: 430804379}
   FinishPanel: {fileID: 988025712}
   EndPanel: {fileID: 2132412729}
+--- !u!114 &1872064326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872064321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b10b7c7f00a0b4dbc573b793a4ecb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SurveyManager: {fileID: 631572258}
 --- !u!1 &1944159070
 GameObject:
   m_ObjectHideFlags: 0
