@@ -6,7 +6,7 @@ public enum MessageType{
     OpenQuestion,
     Encouragement,
     Gift,
-    Finish
+    DebugFinish
 }
 
 [System.Serializable]

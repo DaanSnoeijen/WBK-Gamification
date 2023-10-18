@@ -32,7 +32,7 @@ public class MessageCreator : MonoBehaviour
                 message = Instantiate(InnoGift, ScrollViewContent.transform);
                 break;
 
-            case MessageType.Finish:
+            case MessageType.DebugFinish:
                 message = Instantiate(InnoFinish, ScrollViewContent.transform);
                 break;
 

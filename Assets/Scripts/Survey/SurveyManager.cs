@@ -51,7 +51,7 @@ public class SurveyManager : MonoBehaviour
         Question question = _questions[listId - 1];
         if (listId == _questions.Count)
         {
-            MessageCreator.CreateInnoMessage(question.text, MessageType.Finish);
+            MessageCreator.CreateInnoMessage(question.text, MessageType.DebugFinish);
             ExitButton.SetActive(false);
             EndButton.SetActive(true);
 
@@ -61,7 +61,7 @@ public class SurveyManager : MonoBehaviour
 
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.Gift ||
-            question.type == MessageType.Finish) NextMessage();
+            question.type == MessageType.DebugFinish) NextMessage();
         else InputManager.ToggleSending(true);
     }
 }

@@ -4,6 +4,7 @@ using System.Collections;
 using System;
 using System.Linq;
 using UnityEngine.Events;
+using TMPro;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -20,6 +21,7 @@ public class FortuneWheelManager : MonoBehaviour
 
     [Header("After wheel spin")]
     [SerializeField] GameObject CircleBlock;
+    [SerializeField] GameObject TapText;
     [SerializeField] GameObject EndButton;
 
     [Header("Coin effects")]
@@ -40,6 +42,8 @@ public class FortuneWheelManager : MonoBehaviour
     private void TurnWheel ()
 	{
 		if (_hasSpinned) return;
+
+        CircleBlock.SetActive(false);
 
         _currentLerpRotationTime = 0f;
 
@@ -116,6 +120,7 @@ public class FortuneWheelManager : MonoBehaviour
 			_finalSector.RewardCallback.Invoke();
 
             CircleBlock.SetActive(true);
+            TapText.SetActive(false);
             EndButton.SetActive(true);
         } else {
 			// Calculate current position using linear interpolation
