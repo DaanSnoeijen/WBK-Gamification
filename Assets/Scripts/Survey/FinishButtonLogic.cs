@@ -58,7 +58,7 @@ public class FinishButtonLogic : MonoBehaviour
     IEnumerator IFinishSurvey()
     {
         EndPanel.SetActive(true);
-        FinishPanel.SetActive(false);
+        FinishBack.SetActive(false);
         FinishAnimator.SetTrigger("Hide");
         EndAnimator.SetTrigger("Show");
         yield return new WaitForSeconds(1f);
