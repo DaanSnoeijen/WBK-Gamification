@@ -11,6 +11,7 @@ public class BackButtonLogic : MonoBehaviour
     [Header("Enable panel")]
     [SerializeField] GameObject FocusBackpanel;
     [SerializeField] GameObject ExitPanel;
+    [SerializeField] GameObject CloseBack;
 
     public void ShowCloseScreen(bool show) { StartCoroutine(IShowCloseScreen(show)); }
 
@@ -23,9 +24,13 @@ public class BackButtonLogic : MonoBehaviour
 
             BackAnimator.SetTrigger("Close");
             PanelAnimator.SetTrigger("Show");
+
+            yield return new WaitForSeconds(1f);
+            CloseBack.SetActive(true);
         }
         else
         {
+            CloseBack.SetActive(false);
             BackAnimator.SetTrigger("Open");
             PanelAnimator.SetTrigger("Hide");
             yield return new WaitForSeconds(1f);

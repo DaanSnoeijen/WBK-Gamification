@@ -19,6 +19,7 @@ public class FinishButtonLogic : MonoBehaviour
     [SerializeField] GameObject FocusBackpanel;
     [SerializeField] GameObject FinishPanel;
     [SerializeField] GameObject EndPanel;
+    [SerializeField] GameObject FinishBack;
 
     public void ShowFinishScreen(bool show) { StartCoroutine(IShowFinishScreen(show)); }
 
@@ -38,9 +39,13 @@ public class FinishButtonLogic : MonoBehaviour
 
             BackAnimator.SetTrigger("Close");
             FinishAnimator.SetTrigger("Show");
+
+            yield return new WaitForSeconds(1f);
+            FinishBack.SetActive(true);
         }
         else
         {
+            FinishBack.SetActive(false);
             BackAnimator.SetTrigger("Open");
             FinishAnimator.SetTrigger("Hide");
             yield return new WaitForSeconds(1f);
