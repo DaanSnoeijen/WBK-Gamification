@@ -23,6 +23,9 @@ public class SurveyManager : MonoBehaviour
     [SerializeField] BackButtonLogic CoinInfo;
 
     int listId = 0;
+    int questionAmount = 0;
+
+    float questionId = 0;
 
     float waitInBetween = 0.8f;
     float waitTyping = 2f;
@@ -30,6 +33,8 @@ public class SurveyManager : MonoBehaviour
     private void Start()
     {
         NextMessage();
+
+        foreach (Question item in _questions) if (item.type == MessageType.OpenQuestion) questionAmount++;
     }
 
     public void NextMessage()
@@ -38,7 +43,7 @@ public class SurveyManager : MonoBehaviour
         listId++;
 
         if (listId == _questions.Count) ProgressBarSetter.SetProgressBar(1f);
-        else ProgressBarSetter.SetProgressBar((float)listId / _questions.Count);
+        else if (questionId > 0) ProgressBarSetter.SetProgressBar(questionId / questionAmount);
 
         StartCoroutine(IShowMessage());
     }
@@ -64,8 +69,12 @@ public class SurveyManager : MonoBehaviour
 
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.DebugFinish) NextMessage();
-        else if (question.type != MessageType.Gift && 
-            question.type != MessageType.FirstGift) InputManager.ToggleSending(true);
+        else if (question.type != MessageType.Gift &&
+            question.type != MessageType.FirstGift)
+        {
+            InputManager.ToggleSending(true);
+            questionId++;
+        }
         if (question.type == MessageType.FirstGift) CoinInfo.ShowCloseScreen(true);
     }
 }
