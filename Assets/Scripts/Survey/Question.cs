@@ -6,6 +6,7 @@ public enum MessageType{
     OpenQuestion,
     Encouragement,
     Gift,
+    FirstGift,
     DebugFinish
 }
 

@@ -19,6 +19,9 @@ public class SurveyManager : MonoBehaviour
     [SerializeField] GameObject ExitButton;
     [SerializeField] GameObject EndButton;
 
+    [Header("Info about coins")]
+    [SerializeField] BackButtonLogic CoinInfo;
+
     int listId = 0;
 
     float waitInBetween = 0.8f;
@@ -62,5 +65,6 @@ public class SurveyManager : MonoBehaviour
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.DebugFinish) NextMessage();
         else if (question.type != MessageType.Gift) InputManager.ToggleSending(true);
+        if (question.type == MessageType.FirstGift) CoinInfo.ShowCloseScreen(true);
     }
 }
