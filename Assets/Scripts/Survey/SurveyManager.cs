@@ -64,7 +64,8 @@ public class SurveyManager : MonoBehaviour
 
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.DebugFinish) NextMessage();
-        else if (question.type != MessageType.Gift) InputManager.ToggleSending(true);
+        else if (question.type != MessageType.Gift && 
+            question.type != MessageType.FirstGift) InputManager.ToggleSending(true);
         if (question.type == MessageType.FirstGift) CoinInfo.ShowCloseScreen(true);
     }
 }
