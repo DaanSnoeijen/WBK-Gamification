@@ -11,6 +11,7 @@ public class CircleSliderLogic : MonoBehaviour
     [Header("Slider items that move on touch")]
     [SerializeField] GameObject HandleArea;
     [SerializeField] Slider Slider;
+    [SerializeField] Animator ButtonAnimator;
 
     [Header("Text in slider")]
     [SerializeField] TextMeshProUGUI Text;
@@ -52,11 +53,16 @@ public class CircleSliderLogic : MonoBehaviour
         return Quaternion.FromToRotation(Vector3.up, to - from).eulerAngles.z;
     }
 
-    private void OnMouseDown() { pressed = true; }
+    private void OnMouseDown() 
+    { 
+        pressed = true;
+        ButtonAnimator.SetTrigger("Tap");
+    }
 
     private void OnMouseUp() 
     { 
         pressed = false;
+        ButtonAnimator.SetTrigger("Release");
         if (!continued) Linker.NextMessage();
         continued = true;
     }

@@ -16,7 +16,7 @@ public class CircleSliderContentLinker : MonoBehaviour
 
     public Vector2 GetRotationSliderPoint()
     {
-        return new Vector2(220, Content.transform.position.y * 60f + 35);
+        return new Vector2(220, Content.transform.position.y * 60f - 280);
     }
 
     public void NextMessage() { SurveyManager.NextMessage(); }
