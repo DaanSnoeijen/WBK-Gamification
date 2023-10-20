@@ -9595,7 +9595,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 1
-    text: Bedankt dat je meedoet, jouw mening bepaald de toekomst van je wijk!
+    text: Hey, mijn naam is Fleur en bedankt dat je meedoet! Jouw mening bepaald
+      de toekomst van je wijk!
   - type: 1
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
       te tikken!
