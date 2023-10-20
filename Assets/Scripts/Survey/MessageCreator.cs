@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,9 +17,13 @@ public class MessageCreator : MonoBehaviour
     [SerializeField] GameObject InnoGift;
     [SerializeField] GameObject InnoFinish;
     [SerializeField] GameObject UserMessage;
+    [SerializeField] GameObject UserNumber;
 
     [Header("Add answers to survey checker")]
     [SerializeField] SurveyChecker SurveyChecker;
+
+    [Header("For linking slider content dynamically")]
+    [SerializeField] CircleSliderContentLinker SliderLinker;
 
     float scrollBottomPosition = 0;
 
@@ -32,7 +37,7 @@ public class MessageCreator : MonoBehaviour
                 message = Instantiate(InnoGift, ScrollViewContent.transform);
                 break;
 
-            case MessageType.FirstGift:
+            case MessageType.InfoGift:
                 message = Instantiate(InnoGift, ScrollViewContent.transform);
                 break;
 
@@ -65,6 +70,13 @@ public class MessageCreator : MonoBehaviour
         field.text = text;
         SurveyChecker.AddUserText(field);
 
+        SetScrollBottom(message, true);
+    }
+
+    public void CreateUserNumberInput(int maxValue) 
+    {
+        SliderLinker.SetMaxValue(maxValue);
+        GameObject message = Instantiate(UserNumber, ScrollViewContent.transform);
         SetScrollBottom(message, true);
     }
 

@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public enum MessageType{
     OpenQuestion,
+    NumberQuestion,
+    MultipleChoice,
     Encouragement,
     Gift,
-    FirstGift,
+    InfoGift,
     DebugFinish
 }
 
@@ -19,4 +22,7 @@ public class Question
     [Header("What will the text in the message be?")]
     [TextArea(3, 20)]
     public string text;
+
+    [Header("Max value for slider. Only applicable with Number Question")]
+    public int maxValue;
 }
