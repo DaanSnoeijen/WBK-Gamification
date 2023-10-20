@@ -5,7 +5,6 @@ using UnityEngine;
 public class CircleSliderContentLinker : MonoBehaviour
 {
     [Header("To link components")]
-    [SerializeField] GameObject Content;
     [SerializeField] SurveyManager SurveyManager;
 
     int maxValue;
@@ -13,11 +12,6 @@ public class CircleSliderContentLinker : MonoBehaviour
     public int GetMaxValue() { return maxValue; }
 
     public void SetMaxValue(int maxValue) { this.maxValue = maxValue; }
-
-    public Vector2 GetRotationSliderPoint()
-    {
-        return new Vector2(220, Content.transform.position.y * 60f - 280);
-    }
 
     public void NextMessage() { SurveyManager.NextMessage(); }
 }

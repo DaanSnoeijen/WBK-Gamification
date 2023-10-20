@@ -7688,7 +7688,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.00024414062, y: 49.825317}
+  m_AnchoredPosition: {x: -0.00024414062, y: 49.82544}
   m_SizeDelta: {x: 800.0005, y: 1422}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443404547
@@ -8616,9 +8616,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 3
+  - type: 1
     text: Bedankt dat je meedoet, jouw mening bepaald de toekomst van je wijk!
-    maxValue: 0
+    maxValue: 5
   - type: 3
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
       te tikken!
@@ -12638,7 +12638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00012207031}
+  m_AnchoredPosition: {x: 0, y: -0.00024414062}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1638746088
@@ -13959,7 +13959,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa3e3ce033e2e142a0a39f4f17b7e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Content: {fileID: 1872064321}
   SurveyManager: {fileID: 631572258}
 --- !u!1 &1944159070
 GameObject:

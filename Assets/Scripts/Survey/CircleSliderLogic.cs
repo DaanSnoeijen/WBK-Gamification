@@ -17,8 +17,7 @@ public class CircleSliderLogic : MonoBehaviour
     [SerializeField] TextMeshProUGUI Text;
 
     CircleSliderContentLinker Linker;
-
-    Vector2 RotationPosition;
+    GameObject RotationPosition;
 
     bool pressed;
     bool continued;
@@ -35,9 +34,7 @@ public class CircleSliderLogic : MonoBehaviour
     {
         if (pressed)
         {
-            RotationPosition = Linker.GetRotationSliderPoint();
-            print(RotationPosition);
-            float angle = CalculateAngle(RotationPosition, Input.mousePosition);
+            float angle = CalculateAngle(transform.position, Input.mousePosition);
 
             HandleArea.transform.eulerAngles = new Vector3(0, 0, angle);
             Slider.value = 360 - angle;
