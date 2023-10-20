@@ -8616,7 +8616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 1
+  - type: 3
     text: Bedankt dat je meedoet, jouw mening bepaald de toekomst van je wijk!
     maxValue: 5
   - type: 3
