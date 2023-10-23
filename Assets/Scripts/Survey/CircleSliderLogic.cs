@@ -37,8 +37,6 @@ public class CircleSliderLogic : MonoBehaviour
             Vector2 thisPosition = new Vector2(transform.position.x * (Screen.currentResolution.width / 100) + Screen.currentResolution.width / 2 + 150, 
                 transform.position.y * (Screen.currentResolution.height / 10) + Screen.currentResolution.height / 2 + 100);
             float angle = CalculateAngle(thisPosition, Input.mousePosition);
-            print(transform.position);
-            print(Input.mousePosition);
 
             HandleArea.transform.eulerAngles = new Vector3(0, 0, angle);
             Slider.value = 360 - angle;

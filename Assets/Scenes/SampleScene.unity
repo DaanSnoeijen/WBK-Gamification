@@ -1164,7 +1164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.454834, y: -16.58252}
+  m_AnchoredPosition: {x: -18.45485, y: -16.58252}
   m_SizeDelta: {x: -77.121, y: -324.0676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135902521
@@ -8629,7 +8629,7 @@ MonoBehaviour:
   - type: 1
     text: En hoevaak per week maak jij gebruik van deze accomodaties?
     maxValue: 7
-  - type: 4
+  - type: 5
     text: Bedankt voor je eerlijkheid, tik hier voor een kleine beloning!
     maxValue: 0
   - type: 0
