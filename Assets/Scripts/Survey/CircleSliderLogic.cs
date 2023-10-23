@@ -17,7 +17,6 @@ public class CircleSliderLogic : MonoBehaviour
     [SerializeField] TextMeshProUGUI Text;
 
     CircleSliderContentLinker Linker;
-    GameObject RotationPosition;
 
     bool pressed;
     bool continued;

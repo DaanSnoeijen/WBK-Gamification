@@ -7,6 +7,7 @@ public enum MessageType{
     OpenQuestion,
     NumberQuestion,
     MultipleChoice,
+    MapQuestion,
     Encouragement,
     Gift,
     InfoGift,

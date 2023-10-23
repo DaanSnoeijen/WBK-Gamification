@@ -8616,17 +8616,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 3
+  - type: 4
     text: Bedankt dat je meedoet, jouw mening bepaald de toekomst van je wijk!
     maxValue: 5
     _answers: []
     userCanSendMessage: 0
-  - type: 3
+  - type: 4
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
       te tikken!
     maxValue: 0
     _answers: []
     userCanSendMessage: 0
+  - type: 3
+    text: Laten we beginnen. Waar in Eindhoven woon je?
+    maxValue: 0
+    _answers: []
+    userCanSendMessage: 1
   - type: 2
     text: Wat vind je van de sportaccomodaties in jouw wijk?
     maxValue: 0
@@ -8661,7 +8666,7 @@ MonoBehaviour:
     maxValue: 0
     _answers: []
     userCanSendMessage: 1
-  - type: 3
+  - type: 4
     text: Top, bedankt voor de samenwerking! Jouw antwoorden helpen ons enorm!
     maxValue: 0
     _answers: []
@@ -11758,7 +11763,8 @@ MonoBehaviour:
   InnoFinish: {fileID: 5900494448532079184, guid: 9a946762b1960034dbc8278eb6b00121, type: 3}
   UserMessage: {fileID: 5900494448532079184, guid: c6c5df8715f4fe4479692e24771bd1fe, type: 3}
   UserNumber: {fileID: 5900494448532079184, guid: b4d794ee9a3bb344982768ce8cda957c, type: 3}
-  ClosedAnswer: {fileID: 5900494448532079184, guid: 7dbee4f20454b4145b3ca4d6f5a30ff8, type: 3}
+  UserClosedAnswer: {fileID: 5900494448532079184, guid: 7dbee4f20454b4145b3ca4d6f5a30ff8, type: 3}
+  UserMap: {fileID: 5900494448532079184, guid: 696d98c86e51b624b81f116b85965381, type: 3}
   SpaceFiller: {fileID: 7820963308490559914, guid: 06bd775fdef802a4290c77983cec6f82, type: 3}
   SurveyChecker: {fileID: 631572260}
   SliderLinker: {fileID: 1872064327}
@@ -13869,8 +13875,8 @@ GameObject:
   - component: {fileID: 1872064324}
   - component: {fileID: 1872064323}
   - component: {fileID: 1872064325}
-  - component: {fileID: 1872064326}
   - component: {fileID: 1872064327}
+  - component: {fileID: 1872064328}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -13960,19 +13966,6 @@ MonoBehaviour:
   FinishPanel: {fileID: 988025712}
   EndPanel: {fileID: 2132412729}
   FinishBack: {fileID: 1375957895}
---- !u!114 &1872064326
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872064321}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5b10b7c7f00a0b4dbc573b793a4ecb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SurveyManager: {fileID: 631572258}
 --- !u!114 &1872064327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13983,6 +13976,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fa3e3ce033e2e142a0a39f4f17b7e0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SurveyManager: {fileID: 631572258}
+--- !u!114 &1872064328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872064321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5b10b7c7f00a0b4dbc573b793a4ecb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SurveyManager: {fileID: 631572258}

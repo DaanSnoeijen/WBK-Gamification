@@ -68,6 +68,7 @@ public class SurveyManager : MonoBehaviour
 
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);
         else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers);
+        else if (question.type == MessageType.MapQuestion) MessageCreator.CreateUserMap();
 
         if (question.type == MessageType.OpenQuestion || 
             question.type == MessageType.MultipleChoice) InputManager.ToggleSending(true);
