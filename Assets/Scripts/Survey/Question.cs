@@ -23,6 +23,10 @@ public class Question
     [TextArea(3, 20)]
     public string text;
 
-    [Header("Max value for slider. Only applicable with Number Question")]
+    [Header("Max value for slider. Only applicable for number question")]
     public int maxValue;
+
+    [Header("Closed answers. Only applicable for multiple choice question")]
+    public List<string> _answers;
+    public bool userCanSendMessage = true;
 }

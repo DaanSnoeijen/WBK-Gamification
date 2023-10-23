@@ -61,12 +61,17 @@ public class SurveyManager : MonoBehaviour
             yield break;
         }
         MessageCreator.CreateInnoMessage(question.text, question.type);
+        InputManager.SetUserCanSendMessage(question.userCanSendMessage);
 
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.DebugFinish) NextMessage();
+
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);
-        else if (question.type != MessageType.Gift && 
+        else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers);
+
+        if (question.type != MessageType.Gift && 
             question.type != MessageType.InfoGift) InputManager.ToggleSending(true);
+
         if (question.type == MessageType.InfoGift) CoinInfo.ShowCloseScreen(true);
     }
 }

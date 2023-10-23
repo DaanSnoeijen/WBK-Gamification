@@ -1164,7 +1164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.45485, y: -16.58252}
+  m_AnchoredPosition: {x: -18.454834, y: -16.58252}
   m_SizeDelta: {x: -77.121, y: -324.0676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135902521
@@ -8616,32 +8616,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 1
+  - type: 2
     text: Bedankt dat je meedoet, jouw mening bepaald de toekomst van je wijk!
     maxValue: 5
+    _answers:
+    - Ja
+    - Nee
+    - Weet ik niet
+    userCanSendMessage: 0
   - type: 3
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
       te tikken!
     maxValue: 0
+    _answers: []
+    userCanSendMessage: 1
   - type: 0
     text: Wat vind je van de sportaccomodaties in jouw wijk?
     maxValue: 0
+    _answers: []
+    userCanSendMessage: 1
   - type: 1
     text: En hoevaak per week maak jij gebruik van deze accomodaties?
     maxValue: 7
+    _answers: []
+    userCanSendMessage: 1
   - type: 5
     text: Bedankt voor je eerlijkheid, tik hier voor een kleine beloning!
     maxValue: 0
+    _answers: []
+    userCanSendMessage: 1
   - type: 0
     text: Zijn er sport gerelateerde dingen die jij graag nog terug zou willen zien
       in jouw wijk?
     maxValue: 0
+    _answers: []
+    userCanSendMessage: 1
   - type: 0
     text: Kun je ons vertellen waarom?
     maxValue: 0
+    _answers: []
+    userCanSendMessage: 1
   - type: 3
     text: Top, bedankt voor de samenwerking! Jouw antwoorden helpen ons enorm!
     maxValue: 0
+    _answers: []
+    userCanSendMessage: 1
   MessageCreator: {fileID: 1476029144}
   InputManager: {fileID: 443404547}
   ProgressBarSetter: {fileID: 1837687433}
@@ -11734,6 +11753,7 @@ MonoBehaviour:
   InnoFinish: {fileID: 5900494448532079184, guid: 9a946762b1960034dbc8278eb6b00121, type: 3}
   UserMessage: {fileID: 5900494448532079184, guid: c6c5df8715f4fe4479692e24771bd1fe, type: 3}
   UserNumber: {fileID: 5900494448532079184, guid: b4d794ee9a3bb344982768ce8cda957c, type: 3}
+  ClosedAnswer: {fileID: 5900494448532079184, guid: 7dbee4f20454b4145b3ca4d6f5a30ff8, type: 3}
   SurveyChecker: {fileID: 631572260}
   SliderLinker: {fileID: 1872064327}
 --- !u!95 &1476029145

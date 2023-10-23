@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
+using static System.Net.Mime.MediaTypeNames;
 
 public class MessageCreator : MonoBehaviour
 {
@@ -17,6 +19,7 @@ public class MessageCreator : MonoBehaviour
     [SerializeField] GameObject InnoFinish;
     [SerializeField] GameObject UserMessage;
     [SerializeField] GameObject UserNumber;
+    [SerializeField] GameObject ClosedAnswer;
 
     [Header("Add answers to survey checker")]
     [SerializeField] SurveyChecker SurveyChecker;
@@ -76,6 +79,20 @@ public class MessageCreator : MonoBehaviour
     {
         SliderLinker.SetMaxValue(maxValue);
         GameObject message = Instantiate(UserNumber, ScrollViewContent.transform);
+        SetScrollBottom(message, true);
+    }
+
+    public void CreateClosedAnswers(List<string> _answers)
+    {
+        GameObject message = new GameObject();
+
+        foreach (string item in _answers)
+        {
+            message = Instantiate(ClosedAnswer, ScrollViewContent.transform);
+            TextMeshProUGUI field = message.GetComponentInChildren<TextMeshProUGUI>();
+            field.text = item;
+        }
+
         SetScrollBottom(message, true);
     }
 
