@@ -16,9 +16,16 @@ public class MessageCreator : MonoBehaviour
     [SerializeField] GameObject InnoGift;
     [SerializeField] GameObject InnoFinish;
     [SerializeField] GameObject UserMessage;
+    [SerializeField] GameObject UserNumber;
+    [SerializeField] GameObject UserClosedAnswer;
+    [SerializeField] GameObject UserMap;
+    [SerializeField] GameObject SpaceFiller;
 
     [Header("Add answers to survey checker")]
     [SerializeField] SurveyChecker SurveyChecker;
+
+    [Header("For linking slider content dynamically")]
+    [SerializeField] CircleSliderContentLinker SliderLinker;
 
     float scrollBottomPosition = 0;
 
@@ -32,7 +39,7 @@ public class MessageCreator : MonoBehaviour
                 message = Instantiate(InnoGift, ScrollViewContent.transform);
                 break;
 
-            case MessageType.FirstGift:
+            case MessageType.InfoGift:
                 message = Instantiate(InnoGift, ScrollViewContent.transform);
                 break;
 
@@ -47,14 +54,14 @@ public class MessageCreator : MonoBehaviour
 
         message.GetComponentInChildren<TextMeshProUGUI>().text = text;
 
-        SetScrollBottom(message, false);
+        SetScrollBottom(message, 0);
     }
 
     public GameObject CreateInnoTyping()
     {
         GameObject message = Instantiate(InnoTyping, ScrollViewContent.transform);
 
-        SetScrollBottom(message, false);
+        SetScrollBottom(message, 0);
         return message;
     }
 
@@ -65,19 +72,51 @@ public class MessageCreator : MonoBehaviour
         field.text = text;
         SurveyChecker.AddUserText(field);
 
-        SetScrollBottom(message, true);
+        SetScrollBottom(message, 1);
+
+        Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
-    void SetScrollBottom(GameObject message, bool layoutGroupVertical)
+    public void CreateUserNumberInput(int maxValue) 
+    {
+        SliderLinker.SetMaxValue(maxValue);
+        GameObject message = Instantiate(UserNumber, ScrollViewContent.transform);
+        SetScrollBottom(message, 1);
+    }
+
+    public void CreateClosedAnswers(List<string> _answers) { StartCoroutine(IClosedAnswerAnim(_answers)); }
+
+    public void CreateUserMap()
+    {
+        GameObject message = Instantiate(UserMap, ScrollViewContent.transform);
+        SetScrollBottom(message, 2);
+    }
+
+    void SetScrollBottom(GameObject message, int layoutGroup)
     {
         Canvas.ForceUpdateCanvases();
-        if (layoutGroupVertical) message.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
-        else message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
-        message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
+        if (layoutGroup == 0) message.GetComponent<HorizontalLayoutGroup>().CalculateLayoutInputVertical();
+        else if (layoutGroup == 1) message.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
+        if (layoutGroup != 2) message.GetComponent<ContentSizeFitter>().SetLayoutVertical();
 
         ScrollViewRect.content.GetComponent<VerticalLayoutGroup>().CalculateLayoutInputVertical();
         ScrollViewRect.content.GetComponent<ContentSizeFitter>().SetLayoutVertical();
 
         ScrollViewRect.verticalNormalizedPosition = scrollBottomPosition;
+    }
+
+    IEnumerator IClosedAnswerAnim(List<string> _answers)
+    {
+        foreach (string item in _answers)
+        {
+            GameObject message = Instantiate(UserClosedAnswer, ScrollViewContent.transform);
+            TextMeshProUGUI field = message.GetComponentInChildren<TextMeshProUGUI>();
+            field.text = item;
+
+            SetScrollBottom(message, 1);
+            yield return new WaitForSeconds(0.3f);
+        }
+
+        Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 }
