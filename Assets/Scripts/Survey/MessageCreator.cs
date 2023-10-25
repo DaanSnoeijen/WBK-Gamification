@@ -92,6 +92,8 @@ public class MessageCreator : MonoBehaviour
         SetScrollBottom(message, 2);
     }
 
+    public void CreateSpace() { }
+
     void SetScrollBottom(GameObject message, int layoutGroup)
     {
         Canvas.ForceUpdateCanvases();

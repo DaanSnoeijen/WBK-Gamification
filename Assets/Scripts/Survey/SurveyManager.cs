@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class SurveyManager : MonoBehaviour
 {
@@ -22,7 +21,10 @@ public class SurveyManager : MonoBehaviour
     [Header("Info about coins")]
     [SerializeField] BackButtonLogic CoinInfo;
 
-    int listId = 0;
+    int listId = 0; 
+    int questionAmount = 0;
+
+    float questionId = 0;
 
     float waitInBetween = 0.8f;
     float waitTyping = 2f;
@@ -30,6 +32,11 @@ public class SurveyManager : MonoBehaviour
     private void Start()
     {
         NextMessage();
+
+        foreach (Question item in _questions) if (item.type == MessageType.OpenQuestion ||
+                item.type == MessageType.NumberQuestion ||
+                item.type == MessageType.MapQuestion ||
+                item.type == MessageType.MultipleChoice) questionAmount++;
     }
 
     public void NextMessage()
@@ -38,7 +45,7 @@ public class SurveyManager : MonoBehaviour
         listId++;
 
         if (listId == _questions.Count) ProgressBarSetter.SetProgressBar(1f);
-        else ProgressBarSetter.SetProgressBar((float)listId / _questions.Count);
+        else if (questionId > 0) ProgressBarSetter.SetProgressBar(questionId / questionAmount);
 
         StartCoroutine(IShowMessage());
     }
@@ -65,14 +72,23 @@ public class SurveyManager : MonoBehaviour
 
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.DebugFinish) NextMessage();
-
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);
         else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers);
         else if (question.type == MessageType.MapQuestion) MessageCreator.CreateUserMap();
 
-        if (question.type == MessageType.OpenQuestion || 
+        if (question.type == MessageType.OpenQuestion ||
             question.type == MessageType.MultipleChoice) InputManager.ToggleSending(true);
 
+        IncreaseProgressBarID(question);
+
         if (question.type == MessageType.InfoGift) CoinInfo.ShowCloseScreen(true);
+    }
+
+    void IncreaseProgressBarID(Question question)
+    {
+        if (question.type == MessageType.OpenQuestion ||
+            question.type == MessageType.NumberQuestion ||
+            question.type == MessageType.MapQuestion ||
+            question.type == MessageType.MultipleChoice) questionId++;
     }
 }
