@@ -23,8 +23,7 @@ public class SurveyManager : MonoBehaviour
 
     int listId = 0; 
     int questionAmount = 0;
-
-    float questionId = 0;
+    int questionId = 0;
 
     float waitInBetween = 0.8f;
     float waitTyping = 2f;
