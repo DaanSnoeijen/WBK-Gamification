@@ -23,6 +23,7 @@ public class SurveyManager : MonoBehaviour
     [SerializeField] BackButtonLogic CoinInfo;
 
     int listId = 0;
+    int questionAmount;
     int questionId;
 
     float waitInBetween = 0.8f;
@@ -31,6 +32,11 @@ public class SurveyManager : MonoBehaviour
     private void Start()
     {
         NextMessage();
+
+        foreach (Question item in _questions) if (item.type == MessageType.OpenQuestion ||
+                item.type == MessageType.NumberQuestion ||
+                item.type == MessageType.MapQuestion ||
+                item.type == MessageType.MultipleChoice) questionAmount++;
     }
 
     public void NextMessage()
