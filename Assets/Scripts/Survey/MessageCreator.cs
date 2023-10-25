@@ -82,6 +82,8 @@ public class MessageCreator : MonoBehaviour
         SliderLinker.SetMaxValue(maxValue);
         GameObject message = Instantiate(UserNumber, ScrollViewContent.transform);
         SetScrollBottom(message, 1);
+
+        Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
     public void CreateClosedAnswers(List<string> _answers) { StartCoroutine(IClosedAnswerAnim(_answers)); }
@@ -90,6 +92,8 @@ public class MessageCreator : MonoBehaviour
     {
         GameObject message = Instantiate(UserMap, ScrollViewContent.transform);
         SetScrollBottom(message, 2);
+
+        Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
     void SetScrollBottom(GameObject message, int layoutGroup)
