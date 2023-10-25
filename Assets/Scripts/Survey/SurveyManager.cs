@@ -45,7 +45,7 @@ public class SurveyManager : MonoBehaviour
         listId++;
 
         if (listId == _questions.Count) ProgressBarSetter.SetProgressBar(1f);
-        else ProgressBarSetter.SetProgressBar((float)listId / _questions.Count);
+        else if (questionId > 0) ProgressBarSetter.SetProgressBar(questionId / questionAmount);
 
         StartCoroutine(IShowMessage());
     }
@@ -79,6 +79,8 @@ public class SurveyManager : MonoBehaviour
 
         if (question.type == MessageType.OpenQuestion || 
             question.type == MessageType.MultipleChoice) InputManager.ToggleSending(true);
+
+        IncreaseProgressBarID(question);
 
         if (question.type == MessageType.InfoGift) CoinInfo.ShowCloseScreen(true);
     }
