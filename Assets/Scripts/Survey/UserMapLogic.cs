@@ -13,6 +13,8 @@ public class UserMapLogic : MonoBehaviour
     [Header("Move instructions for map")]
     [SerializeField] GameObject Instructions;
 
+    bool canNextMessage = true;
+
     public void SetInstructions(bool show) { Instructions.SetActive(show); }
 
     public void SetPointer()
@@ -22,6 +24,10 @@ public class UserMapLogic : MonoBehaviour
         position.x -= 680;
         Pointer.anchoredPosition = position;
 
-        GetComponentInParent<NextMessageLinker>().NextMessage();
+        if (canNextMessage)
+        {
+            GetComponentInParent<NextMessageLinker>().NextMessage();
+            canNextMessage = false;
+        }
     }
 }
