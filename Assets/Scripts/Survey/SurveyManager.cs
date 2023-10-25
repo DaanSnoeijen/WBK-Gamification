@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SurveyManager : MonoBehaviour
 {
@@ -21,9 +22,10 @@ public class SurveyManager : MonoBehaviour
     [Header("Info about coins")]
     [SerializeField] BackButtonLogic CoinInfo;
 
-    int listId = 0; 
-    int questionAmount = 0;
-    int questionId = 0;
+    int listId = 0;
+    int questionAmount;
+
+    float questionId;
 
     float waitInBetween = 0.8f;
     float waitTyping = 2f;
@@ -71,11 +73,12 @@ public class SurveyManager : MonoBehaviour
 
         if (question.type == MessageType.Encouragement ||
             question.type == MessageType.DebugFinish) NextMessage();
+
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);
         else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers);
         else if (question.type == MessageType.MapQuestion) MessageCreator.CreateUserMap();
 
-        if (question.type == MessageType.OpenQuestion ||
+        if (question.type == MessageType.OpenQuestion || 
             question.type == MessageType.MultipleChoice) InputManager.ToggleSending(true);
 
         IncreaseProgressBarID(question);
