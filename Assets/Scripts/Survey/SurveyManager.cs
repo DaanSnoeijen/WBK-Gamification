@@ -23,6 +23,7 @@ public class SurveyManager : MonoBehaviour
     [SerializeField] BackButtonLogic CoinInfo;
 
     int listId = 0;
+    int questionId;
 
     float waitInBetween = 0.8f;
     float waitTyping = 2f;
@@ -74,5 +75,13 @@ public class SurveyManager : MonoBehaviour
             question.type == MessageType.MultipleChoice) InputManager.ToggleSending(true);
 
         if (question.type == MessageType.InfoGift) CoinInfo.ShowCloseScreen(true);
+    }
+
+    void IncreaseProgressBarID(Question question)
+    {
+        if (question.type == MessageType.OpenQuestion ||
+            question.type == MessageType.NumberQuestion ||
+            question.type == MessageType.MapQuestion ||
+            question.type == MessageType.MultipleChoice) questionId++;
     }
 }
