@@ -71,7 +71,7 @@ public class SurveyManager : MonoBehaviour
         MessageCreator.CreateInnoMessage(question.text, question.type);
         InputManager.SetUserCanSendMessage(question.userCanSendMessage);
 
-        if (question.type == MessageType.Encouragement ||
+        if (question.type == MessageType.Message ||
             question.type == MessageType.DebugFinish) NextMessage();
 
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);

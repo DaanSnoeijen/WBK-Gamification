@@ -9604,8 +9604,8 @@ MonoBehaviour:
       de toekomst van je wijk!
     maxValue: 0
     _answers: []
-    isRadioButton: 1
-    userCanSendMessage: 1
+    isRadioButton: 0
+    userCanSendMessage: 0
   - type: 4
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
       te tikken!
