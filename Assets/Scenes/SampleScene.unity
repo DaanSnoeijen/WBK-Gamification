@@ -8647,7 +8647,7 @@ MonoBehaviour:
     maxValue: 7
     _answers: []
     userCanSendMessage: 0
-  - type: 5
+  - type: 6
     text: Bedankt voor je eerlijkheid, tik hier voor een kleine beloning!
     maxValue: 0
     _answers: []
