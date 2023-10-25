@@ -86,7 +86,7 @@ public class MessageCreator : MonoBehaviour
         Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
-    public void CreateClosedAnswers(List<string> _answers) { StartCoroutine(IClosedAnswerAnim(_answers)); }
+    public void CreateClosedAnswers(List<string> _answers, bool isRadio) { StartCoroutine(IClosedAnswerAnim(_answers, isRadio)); }
 
     public void CreateUserMap()
     {
@@ -109,17 +109,24 @@ public class MessageCreator : MonoBehaviour
         ScrollViewRect.verticalNormalizedPosition = scrollBottomPosition;
     }
 
-    IEnumerator IClosedAnswerAnim(List<string> _answers)
+    IEnumerator IClosedAnswerAnim(List<string> _answers, bool isRadio)
     {
+        List<ClosedQuestionLogic> closedQuestions = new List<ClosedQuestionLogic>();
+
         foreach (string item in _answers)
         {
             GameObject message = Instantiate(UserClosedAnswer, ScrollViewContent.transform);
+            message.GetComponentInChildren<ClosedQuestionLogic>().SetType(isRadio);
             TextMeshProUGUI field = message.GetComponentInChildren<TextMeshProUGUI>();
             field.text = item;
+
+            closedQuestions.Add(message.GetComponentInChildren<ClosedQuestionLogic>());
 
             SetScrollBottom(message, 1);
             yield return new WaitForSeconds(0.3f);
         }
+
+        foreach (var item in closedQuestions) item.SetAnswerGroup(closedQuestions);
 
         Instantiate(SpaceFiller, ScrollViewContent.transform);
     }

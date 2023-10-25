@@ -75,11 +75,12 @@ public class SurveyManager : MonoBehaviour
             question.type == MessageType.DebugFinish) NextMessage();
 
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);
-        else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers);
+        else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers, question.isRadioButton);
         else if (question.type == MessageType.MapQuestion) MessageCreator.CreateUserMap();
 
         if (question.type == MessageType.OpenQuestion || 
-            question.type == MessageType.MultipleChoice) InputManager.ToggleSending(true);
+            question.type == MessageType.MultipleChoice &&
+            !question.isRadioButton) InputManager.ToggleSending(true);
 
         IncreaseProgressBarID(question);
 

@@ -1240,7 +1240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.454712, y: -16.58252}
+  m_AnchoredPosition: {x: -18.454727, y: -16.58252}
   m_SizeDelta: {x: -77.121, y: -324.0676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135902521
@@ -9604,17 +9604,20 @@ MonoBehaviour:
       de toekomst van je wijk!
     maxValue: 0
     _answers: []
+    isRadioButton: 1
     userCanSendMessage: 1
   - type: 4
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
       te tikken!
     maxValue: 0
     _answers: []
+    isRadioButton: 0
     userCanSendMessage: 1
   - type: 3
     text: Laten we beginnen met het volgende. Waar woon je?
     maxValue: 0
     _answers: []
+    isRadioButton: 0
     userCanSendMessage: 1
   - type: 2
     text: Wat vind je van de sportaccomodaties in jouw wijk?
@@ -9625,35 +9628,41 @@ MonoBehaviour:
     - Te doen
     - Slecht
     - Verschrikkelijk
+    isRadioButton: 1
     userCanSendMessage: 0
   - type: 1
     text: En hoeveel keer per week maak jij gebruik van deze accomodaties?
     maxValue: 7
     _answers: []
+    isRadioButton: 0
     userCanSendMessage: 1
   - type: 6
     text: Bedankt voor je eerlijkheid, tik hier voor een kleine beloning!
     maxValue: 0
     _answers: []
+    isRadioButton: 0
     userCanSendMessage: 1
   - type: 2
     text: Zijn er sport gerelateerde dingen die jij graag nog terug zou willen zien
-      in jouw wijk?
+      in jouw wijk? (Meerdere antwoorden zijn mogelijk)
     maxValue: 0
     _answers:
     - Voetbalveld
     - Speeltuin
     - Etc...
+    isRadioButton: 0
     userCanSendMessage: 0
   - type: 0
     text: Kun je ons vertellen waarom?
     maxValue: 0
     _answers: []
+    isRadioButton: 0
     userCanSendMessage: 1
   - type: 4
     text: Top, bedankt voor de samenwerking! Jouw antwoorden helpen ons enorm!
     maxValue: 0
     _answers: []
+    isRadioButton: 0
     userCanSendMessage: 1
   MessageCreator: {fileID: 1476029144}
   InputManager: {fileID: 443404547}
