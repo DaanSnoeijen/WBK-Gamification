@@ -1240,7 +1240,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.454727, y: -16.58252}
+  m_AnchoredPosition: {x: -18.45459, y: -16.58252}
   m_SizeDelta: {x: -77.121, y: -324.0676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135902521
@@ -9600,7 +9600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 4
-    text: Hey, mijn naam is Fleur en bedankt dat je meedoet! Jouw mening bepaald
+    text: Hey, mijn naam is Fleur en bedankt dat je meedoet! Jouw mening bepaalt
       de toekomst van je wijk!
     maxValue: 0
     _answers: []
@@ -10586,7 +10586,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 40.556152}
+  m_AnchoredPosition: {x: 0, y: 40.556152}
   m_SizeDelta: {x: 0.000061035, y: 40.556}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &883701531
@@ -15768,7 +15768,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -0.00024414062}
+  m_AnchoredPosition: {x: 0.00024414062, y: -0.00024414062}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1638746088
