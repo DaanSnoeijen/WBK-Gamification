@@ -1006,6 +1006,82 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &92816093
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 92816094}
+  - component: {fileID: 92816096}
+  - component: {fileID: 92816095}
+  m_Layer: 5
+  m_Name: Coin (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &92816094
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92816093}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6596850396039830009}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 180.3, y: 194.4}
+  m_SizeDelta: {x: 86.03, y: 87.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &92816095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92816093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8a9023c132b27504a8a44986167058dc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &92816096
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92816093}
+  m_CullTransparentMesh: 1
 --- !u!1 &96628436
 GameObject:
   m_ObjectHideFlags: 0
@@ -7421,14 +7497,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Meer munten = meer kans op prijs!
+  m_text: 'Meer munten = meer prijs!
 
 
-    Je kunt met deze munten voor andere
-    gebruikers een draai aan het rad kopen, en zo ontvang je er zelf ook een!
+    1000 munten kunnen ingeleverd worden voor
+    een 5 euro Bol.com waardebon.
 
-    Rond
-    de vragenlijst af voor meer info over de munten en het rad'
+    Rond de vragenlijst af voor meer munten!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9446,7 +9521,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4288980132
   m_fontColor: {r: 0.6431373, g: 0.6431373, b: 0.6431373, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -9621,13 +9696,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 4
-    text: Hey, mijn naam is Fleur en bedankt dat je meedoet! Jouw mening bepaalt
-      de toekomst van je wijk!
+  - type: 0
+    text: Hey, mijn naam is Fleur en leuk dat je meedoet! Jouw mening bepaalt de
+      toekomst van je wijk!
     maxValue: 5
     _answers: []
     isRadioButton: 0
-    userCanSendMessage: 0
+    userCanSendMessage: 1
   - type: 4
     text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
       te tikken!
@@ -10885,7 +10960,7 @@ GameObject:
   - component: {fileID: 904265857}
   - component: {fileID: 904265856}
   m_Layer: 5
-  m_Name: Waardebon
+  m_Name: Coin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10898,18 +10973,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904265854}
-  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211, y: 191}
-  m_SizeDelta: {x: 119.89, y: 137.2}
+  m_AnchoredPosition: {x: 217, y: 195.1}
+  m_SizeDelta: {x: 86.03, y: 87.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &904265856
 MonoBehaviour:
@@ -10931,7 +11006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa5adccf07fd52d4c9098d13228ac731, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a9023c132b27504a8a44986167058dc, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -11207,7 +11282,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 104.961006}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11283,7 +11358,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165.65201}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12286,7 +12361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Voor je inzet, maak kans op een Bol.com waardebon t.w.v. 50 euro!
+  m_text: "Verzamel 1000 munten voor een \n\u20AC5 Bol.com waardebon!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -13439,7 +13514,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 283.68298}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13667,7 +13742,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 283.68298}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14208,7 +14283,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 223.915}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18282,7 +18357,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165.65201}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -18478,6 +18553,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2105122656}
+  m_CullTransparentMesh: 1
+--- !u!1 &2110842469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2110842470}
+  - component: {fileID: 2110842472}
+  - component: {fileID: 2110842471}
+  m_Layer: 5
+  m_Name: Coin (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2110842470
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110842469}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6596850396039830009}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 210.8, y: 161.2}
+  m_SizeDelta: {x: 86.03, y: 87.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2110842471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110842469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8a9023c132b27504a8a44986167058dc, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2110842472
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110842469}
   m_CullTransparentMesh: 1
 --- !u!1 &2119202682
 GameObject:
@@ -19311,76 +19462,8 @@ MonoBehaviour:
   CoinsEffect: {fileID: 269215836}
   UpdateCoins: {fileID: 1476029146}
   Sectors:
-  - RewardValue: 0
-    Probability: 0
-    RewardCallback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6413817189744385731}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: RewardCoins
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - RewardValue: 50
-    Probability: 80
-    RewardCallback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6413817189744385731}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: RewardCoins
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 50
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - RewardValue: 100
-    Probability: 30
-    RewardCallback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6413817189744385731}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: RewardCoins
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 100
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - RewardValue: 50
-    Probability: 80
-    RewardCallback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 6413817189744385731}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: RewardCoins
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 50
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - RewardValue: 200
-    Probability: 10
+    Probability: 15
     RewardCallback:
       m_PersistentCalls:
         m_Calls:
@@ -19448,7 +19531,75 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
   - RewardValue: 200
-    Probability: 10
+    Probability: 15
+    RewardCallback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6413817189744385731}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: RewardCoins
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 200
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - RewardValue: 50
+    Probability: 80
+    RewardCallback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6413817189744385731}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: RewardCoins
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - RewardValue: 100
+    Probability: 30
+    RewardCallback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6413817189744385731}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: RewardCoins
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - RewardValue: 50
+    Probability: 80
+    RewardCallback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6413817189744385731}
+          m_TargetAssemblyTypeName: 
+          m_MethodName: RewardCoins
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 50
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - RewardValue: 200
+    Probability: 15
     RewardCallback:
       m_PersistentCalls:
         m_Calls:
@@ -20172,7 +20323,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 104.961006}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20252,7 +20403,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 223.915}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20333,7 +20484,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 283.68298}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -20381,7 +20532,6 @@ RectTransform:
   - {fileID: 6596850388562814119}
   - {fileID: 6596850395789192237}
   - {fileID: 6596850395240076745}
-  - {fileID: 904265855}
   - {fileID: 1344658541}
   - {fileID: 1363654087}
   - {fileID: 6596850395873444559}
@@ -20392,6 +20542,9 @@ RectTransform:
   - {fileID: 971444355}
   - {fileID: 6596850390045422101}
   - {fileID: 970435835}
+  - {fileID: 92816094}
+  - {fileID: 2110842470}
+  - {fileID: 904265855}
   m_Father: {fileID: 6596850395344332731}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
@@ -20413,7 +20566,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6596850396039830009}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 165.65201}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

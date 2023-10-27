@@ -74,6 +74,8 @@ public class MessageCreator : MonoBehaviour
 
         SetScrollBottom(message, 1);
 
+        StartCoroutine(ICheckQuestionMessage(text));
+
         Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
@@ -129,5 +131,16 @@ public class MessageCreator : MonoBehaviour
         foreach (var item in closedQuestions) item.SetAnswerGroup(closedQuestions);
 
         Instantiate(SpaceFiller, ScrollViewContent.transform);
+    }
+
+    IEnumerator ICheckQuestionMessage(string text)
+    {
+        if (text.Contains("?"))
+        {
+            yield return new WaitForSeconds(2.79f);
+
+            CreateInnoMessage("Sorry, maar ik kan geen vragen beantwoorden. " +
+            "Tik op uw bericht om deze aan te passen.", MessageType.Message);
+        }
     }
 }
