@@ -12,7 +12,15 @@ public class ClosedQuestionLogic : MonoBehaviour
     [SerializeField] RectTransform MessageBackSize;
     [SerializeField] RectTransform ThisSize;
 
+    [Header("Checkbox or radiobox")]
+    [SerializeField] GameObject Checkbox;
+    [SerializeField] GameObject Radiobox;
+
+    List<ClosedQuestionLogic> _otherAnswers;
+
     bool selected;
+    bool radio;
+    bool canNextMessage = true;
 
     private void Start()
     {
@@ -22,12 +30,32 @@ public class ClosedQuestionLogic : MonoBehaviour
             MessageBackSize.position.z);
     }
 
+    public void SetAnswerGroup(List<ClosedQuestionLogic> otherAnswers) { _otherAnswers = otherAnswers; }
+
+    public void SetType(bool isRadio)
+    {
+        radio = isRadio;
+        if (isRadio) Radiobox.SetActive(true);
+        else Checkbox.SetActive(true);
+    }
+
     public void ChangeSelected()
     {
         selected = !selected;
 
         if (selected)
         {
+            if (radio)
+            {
+                if (canNextMessage) GetComponentInParent<NextMessageLinker>().NextMessage();
+
+                foreach (var item in _otherAnswers)
+                {
+                    item.canNextMessage = false;
+                    if (item != this && item.selected) item.ChangeSelected();
+                }
+            }
+
             AnswerAnimator.SetTrigger("On");
             MessageBackAnimator.SetTrigger("On");
         }

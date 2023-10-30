@@ -8,7 +8,7 @@ public enum MessageType{
     NumberQuestion,
     MultipleChoice,
     MapQuestion,
-    Encouragement,
+    Message,
     Gift,
     InfoGift,
     DebugFinish
@@ -29,5 +29,6 @@ public class Question
 
     [Header("Closed answers. Only applicable for multiple choice question")]
     public List<string> _answers;
+    public bool isRadioButton;
     public bool userCanSendMessage = true;
 }

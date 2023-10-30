@@ -74,6 +74,8 @@ public class MessageCreator : MonoBehaviour
 
         SetScrollBottom(message, 1);
 
+        StartCoroutine(ICheckQuestionMessage(text));
+
         Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
@@ -86,7 +88,7 @@ public class MessageCreator : MonoBehaviour
         Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
-    public void CreateClosedAnswers(List<string> _answers) { StartCoroutine(IClosedAnswerAnim(_answers)); }
+    public void CreateClosedAnswers(List<string> _answers, bool isRadio) { StartCoroutine(IClosedAnswerAnim(_answers, isRadio)); }
 
     public void CreateUserMap()
     {
@@ -109,18 +111,36 @@ public class MessageCreator : MonoBehaviour
         ScrollViewRect.verticalNormalizedPosition = scrollBottomPosition;
     }
 
-    IEnumerator IClosedAnswerAnim(List<string> _answers)
+    IEnumerator IClosedAnswerAnim(List<string> _answers, bool isRadio)
     {
+        List<ClosedQuestionLogic> closedQuestions = new List<ClosedQuestionLogic>();
+
         foreach (string item in _answers)
         {
             GameObject message = Instantiate(UserClosedAnswer, ScrollViewContent.transform);
+            message.GetComponentInChildren<ClosedQuestionLogic>().SetType(isRadio);
             TextMeshProUGUI field = message.GetComponentInChildren<TextMeshProUGUI>();
             field.text = item;
+
+            closedQuestions.Add(message.GetComponentInChildren<ClosedQuestionLogic>());
 
             SetScrollBottom(message, 1);
             yield return new WaitForSeconds(0.3f);
         }
 
+        foreach (var item in closedQuestions) item.SetAnswerGroup(closedQuestions);
+
         Instantiate(SpaceFiller, ScrollViewContent.transform);
+    }
+
+    IEnumerator ICheckQuestionMessage(string text)
+    {
+        if (text.Contains("?"))
+        {
+            yield return new WaitForSeconds(2.79f);
+
+            CreateInnoMessage("Sorry, maar ik kan geen vragen beantwoorden. " +
+            "Tik op uw bericht om deze aan te passen.", MessageType.Message);
+        }
     }
 }
