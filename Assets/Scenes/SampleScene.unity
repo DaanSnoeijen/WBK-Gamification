@@ -7134,7 +7134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &331419929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9696,71 +9696,45 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 0
-    text: Hey, mijn naam is Fleur en leuk dat je meedoet! Jouw mening bepaalt de
-      toekomst van je wijk!
+  - type: 4
+    text: Hey, mijn naam is Fleur en welkom. Leuk dat je meedoet!
     maxValue: 5
     _answers: []
     isRadioButton: 0
-    userCanSendMessage: 1
-  - type: 4
-    text: Maak je geen zorgen over je antwoorden. Je kunt ze aanpassen door er op
-      te tikken!
-    maxValue: 0
-    _answers: []
-    isRadioButton: 0
-    userCanSendMessage: 1
-  - type: 3
-    text: Laten we beginnen met het volgende. Waar woon je?
-    maxValue: 0
-    _answers: []
-    isRadioButton: 0
-    userCanSendMessage: 1
+    userCanSendMessage: 0
   - type: 2
-    text: Wat vind je van de sportaccomodaties in jouw wijk?
+    text: Is het fijner om de vragenlijst als een soort gesprek te voeren, tegenover
+      een blad met vragen?
     maxValue: 0
     _answers:
-    - Geweldig
-    - Goed
-    - Te doen
-    - Slecht
-    - Verschrikkelijk
+    - Veel fijner
+    - Fijner
+    - Gelijk
+    - Minder fijn
+    - Veel minder fijn
     isRadioButton: 1
     userCanSendMessage: 0
   - type: 1
-    text: En hoeveel keer per week maak jij gebruik van deze accomodaties?
-    maxValue: 7
+    text: Welk cijfer zou je deze vorm van vragenlijsten geven?
+    maxValue: 10
     _answers: []
-    isRadioButton: 0
-    userCanSendMessage: 1
-  - type: 6
-    text: Bedankt voor je eerlijkheid, tik hier voor een kleine beloning!
-    maxValue: 0
-    _answers: []
-    isRadioButton: 0
-    userCanSendMessage: 1
-  - type: 2
-    text: Zijn er sport gerelateerde dingen die jij graag nog terug zou willen zien
-      in jouw wijk? (Meerdere antwoorden zijn mogelijk)
-    maxValue: 0
-    _answers:
-    - Voetbalveld
-    - Speeltuin
-    - Etc...
     isRadioButton: 0
     userCanSendMessage: 0
-  - type: 0
-    text: Kun je ons vertellen waarom?
+  - type: 2
+    text: Voelt een gesprek met mij persoonlijker dan met het bedrijf?
     maxValue: 0
-    _answers: []
-    isRadioButton: 0
-    userCanSendMessage: 1
+    _answers:
+    - Ja
+    - Nee
+    - Maakt niet veel verschil
+    isRadioButton: 1
+    userCanSendMessage: 0
   - type: 4
-    text: Top, bedankt voor de samenwerking! Jouw antwoorden helpen ons enorm!
+    text: Bedankt voor het invullen!
     maxValue: 0
     _answers: []
     isRadioButton: 0
-    userCanSendMessage: 1
+    userCanSendMessage: 0
   MessageCreator: {fileID: 1476029144}
   InputManager: {fileID: 443404547}
   ProgressBarSetter: {fileID: 1743654848}
@@ -11763,7 +11737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1029215902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12320,7 +12294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1109403508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19119,7 +19093,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &6383002725853717967
 GameObject:
   m_ObjectHideFlags: 0
