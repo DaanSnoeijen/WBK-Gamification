@@ -8422,7 +8422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &486796976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8591,7 +8591,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0}
+  m_BackGroundColor: {r: 0.21176471, g: 0.21176471, b: 0.21176471, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -9697,36 +9697,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 4
-    text: Hey, mijn naam is Fleur en welkom. Leuk dat je meedoet!
+    text: Hey, welkom. Leuk dat je meedoet!
     maxValue: 5
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
   - type: 2
-    text: Is het fijner om de vragenlijst als een soort gesprek te voeren, tegenover
-      een blad met vragen?
+    text: Wat vindt u van het Urban Sport Park?
     maxValue: 0
     _answers:
-    - Veel fijner
-    - Fijner
-    - Gelijk
-    - Minder fijn
-    - Veel minder fijn
+    - Geweldig
+    - Goed
+    - Gemiddeld
+    - Slecht
+    - Verschrikkelijk
     isRadioButton: 1
     userCanSendMessage: 0
   - type: 1
-    text: Welk cijfer zou je deze vorm van vragenlijsten geven?
-    maxValue: 10
+    text: Hoevaak komt u hier per week?
+    maxValue: 7
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
   - type: 2
-    text: Voelt een gesprek met mij persoonlijker dan met het bedrijf?
+    text: Is deze vragenlijst lang?
     maxValue: 0
     _answers:
-    - Ja
-    - Nee
-    - Maakt niet veel verschil
+    - Ja, erg lang
+    - Gemiddeld
+    - Nee, erg kort
     isRadioButton: 1
     userCanSendMessage: 0
   - type: 4
@@ -11975,7 +11974,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.321
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -16800,7 +16799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8effd19f327c8cd4eaff1ec201735bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ProgressBar: {fileID: 1743654846}
+  ProgressBar: {fileID: 1070130892}
 --- !u!1 &1754367702
 GameObject:
   m_ObjectHideFlags: 0
@@ -17314,7 +17313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1837687432
 RectTransform:
   m_ObjectHideFlags: 0
