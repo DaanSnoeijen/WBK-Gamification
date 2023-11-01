@@ -7134,7 +7134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &331419929
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9702,8 +9702,14 @@ MonoBehaviour:
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
+  - type: 4
+    text: Maak je geen zorgen om je antwoorden in dit prototype. Ze worden niet opgeslagen.
+    maxValue: 0
+    _answers: []
+    isRadioButton: 0
+    userCanSendMessage: 0
   - type: 2
-    text: Wat vindt u van het Urban Sport Park?
+    text: Laten we beginnen met het volgende. Wat vind je van het Area51?
     maxValue: 0
     _answers:
     - Geweldig
@@ -9713,23 +9719,35 @@ MonoBehaviour:
     - Verschrikkelijk
     isRadioButton: 1
     userCanSendMessage: 0
-  - type: 1
-    text: Hoevaak komt u hier per week?
+  - type: 2
+    text: Hoe vaak kom je hier?
     maxValue: 7
+    _answers:
+    - Meerdere malen per week
+    - Wekelijks
+    - Maandelijks
+    - Een paar keer per jaar
+    - Bijna nooit
+    - Dit is mijn eerste keer
+    isRadioButton: 1
+    userCanSendMessage: 0
+  - type: 2
+    text: Voor wie bezoek je Area51?
+    maxValue: 0
+    _answers:
+    - Voor mezelf
+    - Voor anderen
+    - Verschilt per bezoek
+    isRadioButton: 1
+    userCanSendMessage: 0
+  - type: 1
+    text: Welk cijfer geef je Area51 op een schaal van 1 tot 10?
+    maxValue: 10
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
-  - type: 2
-    text: Is deze vragenlijst lang?
-    maxValue: 0
-    _answers:
-    - Ja, erg lang
-    - Gemiddeld
-    - Nee, erg kort
-    isRadioButton: 1
-    userCanSendMessage: 0
   - type: 4
-    text: Bedankt voor het invullen!
+    text: Top, heel erg bedankt voor je deelname!
     maxValue: 0
     _answers: []
     isRadioButton: 0
