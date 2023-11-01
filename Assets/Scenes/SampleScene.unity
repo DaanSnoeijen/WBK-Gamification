@@ -9709,7 +9709,7 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 0
   - type: 2
-    text: Laten we beginnen met het volgende. Wat vind je van het Area51?
+    text: Laten we beginnen met het volgende. Wat vind je van Area51?
     maxValue: 0
     _answers:
     - Geweldig
@@ -9728,7 +9728,7 @@ MonoBehaviour:
     - Maandelijks
     - Een paar keer per jaar
     - Bijna nooit
-    - Dit is mijn eerste keer
+    - Dit is mijn eerste bezoek
     isRadioButton: 1
     userCanSendMessage: 0
   - type: 2
