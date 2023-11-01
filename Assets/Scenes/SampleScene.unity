@@ -9697,40 +9697,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 4
-    text: Hey, mijn naam is Fleur en welkom. Leuk dat je meedoet!
+    text: Hey, mijn naam is Fleur. Leuk dat je meedoet!
     maxValue: 5
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
-  - type: 2
-    text: Is het fijner om de vragenlijst als een soort gesprek te voeren, tegenover
-      een blad met vragen?
+  - type: 4
+    text: Maak je geen zorgen om je antwoorden in dit prototype. Ze worden niet opgeslagen.
     maxValue: 0
-    _answers:
-    - Veel fijner
-    - Fijner
-    - Gelijk
-    - Minder fijn
-    - Veel minder fijn
-    isRadioButton: 1
-    userCanSendMessage: 0
-  - type: 1
-    text: Welk cijfer zou je deze vorm van vragenlijsten geven?
-    maxValue: 10
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
   - type: 2
-    text: Voelt een gesprek met mij persoonlijker dan met het bedrijf?
+    text: Laten we beginnen met het volgende. Wat vind je van Area51?
     maxValue: 0
     _answers:
-    - Ja
-    - Nee
-    - Maakt niet veel verschil
+    - Geweldig
+    - Goed
+    - Gemiddeld
+    - Slecht
+    - Verschrikkelijk
     isRadioButton: 1
     userCanSendMessage: 0
+  - type: 2
+    text: Hoe vaak kom je hier?
+    maxValue: 10
+    _answers:
+    - Meerdere malen per week
+    - Wekelijks
+    - Maandelijks
+    - Een paar keer per jaar
+    - Bijna nooit
+    - Dit is mijn eerste bezoek
+    isRadioButton: 1
+    userCanSendMessage: 0
+  - type: 2
+    text: Voor wie bezoek je Area51?
+    maxValue: 0
+    _answers:
+    - Voor mezelf
+    - Voor anderen
+    - Verschilt per bezoek
+    isRadioButton: 1
+    userCanSendMessage: 0
+  - type: 1
+    text: Welk cijfer geef je Area51 op een schaal van 1 tot 10?
+    maxValue: 10
+    _answers: []
+    isRadioButton: 0
+    userCanSendMessage: 0
   - type: 4
-    text: Bedankt voor het invullen!
+    text: Top, heel erg bedankt voor je deelname!
     maxValue: 0
     _answers: []
     isRadioButton: 0
