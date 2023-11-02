@@ -11,7 +11,7 @@ public class MapZooming : MonoBehaviour
     float zoomSpeedPinch = 0.005f;
     float zoomSpeedMouseScrollWheel = 0.05f;
     float zoomMin = 1f;
-    float zoomMax = 5f;
+    float zoomMax = 3f;
 
     private void LateUpdate()
     {
