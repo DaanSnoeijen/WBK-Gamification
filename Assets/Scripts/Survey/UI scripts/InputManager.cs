@@ -14,10 +14,10 @@ public class InputManager : MonoBehaviour
     [SerializeField] Image SendButtonBackImage;
     [SerializeField] Button SendButton;
 
-    Color ButtonOnColor = new Color(0f, 0.635f, 0.909f);
+    Color ButtonOnColor = new Color(0.99f, 0.36f, 0f);
     Color ButtonOffColor = new Color(0.29f, 0.29f, 0.29f);
 
-    Color ButtonBackOnColor = new Color(0.247f, 0.45f, 0.8f);
+    Color ButtonBackOnColor = new Color(0.83f, 0.3f, 0f);
     Color ButtonBackOffColor = new Color(0.211f, 0.211f, 0.211f);
 
     bool send;

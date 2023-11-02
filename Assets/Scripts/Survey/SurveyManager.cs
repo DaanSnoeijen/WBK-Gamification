@@ -38,6 +38,8 @@ public class SurveyManager : MonoBehaviour
                 item.type == MessageType.NumberQuestion ||
                 item.type == MessageType.MapQuestion ||
                 item.type == MessageType.MultipleChoice) questionAmount++;
+
+        ProgressBarSetter.SetQuestionsTotal(questionAmount);
     }
 
     public void NextMessage()
@@ -47,6 +49,7 @@ public class SurveyManager : MonoBehaviour
 
         if (listId == _questions.Count) ProgressBarSetter.SetProgressBar(1f);
         else if (questionId > 0) ProgressBarSetter.SetProgressBar(questionId / questionAmount);
+        ProgressBarSetter.SetQuestionsLeft((int)questionId);
 
         StartCoroutine(IShowMessage());
     }
