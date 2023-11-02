@@ -6,47 +6,27 @@ using UnityEngine.UI;
 
 public class MapZooming : MonoBehaviour
 {
-    [SerializeField] RectTransform rectTransform;
     [SerializeField] ScrollRect scrollRect;
-    float zoomSpeedPinch = 0.001f;
+
+    float zoomSpeedPinch = 0.005f;
     float zoomSpeedMouseScrollWheel = 0.05f;
     float zoomMin = 1f;
-    float zoomMax = 3f;
-
-    private void Awake()
-    {
-        rectTransform = GetComponent<RectTransform>();
-    }
+    float zoomMax = 5f;
 
     private void LateUpdate()
     {
         Zoom();
     }
 
-    //public void OnDrag(PointerEventData eventData)
-    //{
-    //    Zoom();
-    //    if (Input.touchCount <= 1) scrollRect.OnDrag(eventData);
-    //}
-
-    //public void OnEndDrag(PointerEventData eventData)
-    //{
-    //    scrollRect.OnEndDrag(eventData);
-    //}
-
-    //public void OnBeginDrag(PointerEventData eventData)
-    //{
-    //    if (Input.touchCount <= 1) scrollRect.OnBeginDrag(eventData);
-    //}
-
     void Zoom()
     {
-        //var contentPosition = rectTransform.anchoredPosition;
-
         var mouseScrollWheel = Input.mouseScrollDelta.y;
         float scaleChange = 0f;
         if (Input.touchCount == 2)
         {
+            scrollRect.horizontal = false;
+            scrollRect.vertical = false;
+
             Touch touchZero = Input.GetTouch(0);
             Touch touchOne = Input.GetTouch(1);
 
@@ -60,6 +40,11 @@ public class MapZooming : MonoBehaviour
 
             scaleChange = deltaMagnitudeDiff * zoomSpeedPinch;
         }
+        else
+        {
+            scrollRect.horizontal = true;
+            scrollRect.vertical = true;
+        }
 
         if (mouseScrollWheel != 0)
         {
@@ -71,14 +56,8 @@ public class MapZooming : MonoBehaviour
             var scaleX = transform.localScale.x;
             scaleX += scaleChange;
             scaleX = Mathf.Clamp(scaleX, zoomMin, zoomMax);
-            //var size = rectTransform.rect.size;
-            //size.Scale(rectTransform.localScale);
-            //var parentRect = ((RectTransform)rectTransform.parent);
-            //var parentSize = parentRect.rect.size;
-            //parentSize.Scale(parentRect.localScale);
 
             transform.localScale = new Vector3(scaleX, scaleX, transform.localScale.z);
-            //rectTransform.anchoredPosition = contentPosition;
         }
     }
 }
