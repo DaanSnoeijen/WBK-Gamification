@@ -9494,7 +9494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 3
+  - type: 1
     text: Hey, mijn naam is Fleur. Leuk dat je meedoet!
     maxValue: 5
     _answers: []
