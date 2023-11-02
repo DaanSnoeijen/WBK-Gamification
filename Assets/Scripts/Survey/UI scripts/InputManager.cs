@@ -8,7 +8,6 @@ public class InputManager : MonoBehaviour
 {
     [Header("Able to send messages")]
     [SerializeField] MessageCreator MessageCreator;
-    [SerializeField] TMP_InputField InputField;
 
     [Header("Input field toggling")]
     [SerializeField] Image SendButtonImage;
@@ -28,13 +27,11 @@ public class InputManager : MonoBehaviour
     public void SendUserMessage() 
     {
         if (!send) return;
-        MessageCreator.CreateUserMessage(InputField.text);
-        InputField.text = "";
+        MessageCreator.CreateUserMessage();
     }
 
     public void ToggleSending(bool state)
     {
-        InputField.enabled = state;
         SendButton.enabled = state;
 
         if (state)
