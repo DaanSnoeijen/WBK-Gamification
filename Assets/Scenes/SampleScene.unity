@@ -16635,7 +16635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProgressBar: {fileID: 1070130892}
   ProgressBarBack: {fileID: 1743654846}
-  QuestionsLeft: {fileID: 0}
+  QuestionsLeft: {fileID: 870229449}
 --- !u!1 &1754367702
 GameObject:
   m_ObjectHideFlags: 0
@@ -17142,7 +17142,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837687432}
-  - component: {fileID: 1837687433}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -17174,21 +17173,6 @@ RectTransform:
   m_AnchoredPosition: {x: -2.5274048, y: -404.5}
   m_SizeDelta: {x: 31.611, y: 1005.1807}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1837687433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1837687431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8effd19f327c8cd4eaff1ec201735bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProgressBar: {fileID: 1070130892}
-  ProgressBarBack: {fileID: 1743654846}
-  QuestionsLeft: {fileID: 870229449}
 --- !u!1 &1848795019
 GameObject:
   m_ObjectHideFlags: 0
