@@ -9494,7 +9494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 1
+  - type: 4
     text: Hey, mijn naam is Fleur. Welkom bij de vragenlijst en leuk dat je meedoet!
     maxValue: 5
     _answers: []
@@ -9546,7 +9546,8 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 0
   - type: 2
-    text: Wat zou je het liefst terug zien in je wijk?
+    text: Wat zou je het liefst terug zien in je wijk? Meerdere antwoorden zijn mogelijk.
+      Tik onderin om verder te gaan.
     maxValue: 0
     _answers:
     - Voetbalveld
