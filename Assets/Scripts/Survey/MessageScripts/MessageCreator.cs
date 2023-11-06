@@ -65,16 +65,13 @@ public class MessageCreator : MonoBehaviour
         return message;
     }
 
-    public void CreateUserMessage(string text)
+    public void CreateUserMessage()
     {
         GameObject message = Instantiate(UserMessage, ScrollViewContent.transform);
         TMP_InputField field = message.GetComponentInChildren<TMP_InputField>();
-        field.text = text;
         SurveyChecker.AddUserText(field);
 
         SetScrollBottom(message, 1);
-
-        StartCoroutine(ICheckQuestionMessage(text));
 
         Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
@@ -125,22 +122,11 @@ public class MessageCreator : MonoBehaviour
             closedQuestions.Add(message.GetComponentInChildren<ClosedQuestionLogic>());
 
             SetScrollBottom(message, 1);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.2f);
         }
 
         foreach (var item in closedQuestions) item.SetAnswerGroup(closedQuestions);
 
         Instantiate(SpaceFiller, ScrollViewContent.transform);
-    }
-
-    IEnumerator ICheckQuestionMessage(string text)
-    {
-        if (text.Contains("?"))
-        {
-            yield return new WaitForSeconds(2.79f);
-
-            CreateInnoMessage("Sorry, maar ik kan geen vragen beantwoorden. " +
-            "Tik op uw bericht om deze aan te passen.", MessageType.Message);
-        }
     }
 }

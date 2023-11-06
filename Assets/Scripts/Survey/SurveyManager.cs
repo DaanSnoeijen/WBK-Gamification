@@ -27,8 +27,8 @@ public class SurveyManager : MonoBehaviour
 
     float questionId;
 
-    float waitInBetween = 0.8f;
-    float waitTyping = 2f;
+    float waitInBetween = 0.5f;
+    float waitTyping = 1.2f;
 
     private void Start()
     {
@@ -38,6 +38,8 @@ public class SurveyManager : MonoBehaviour
                 item.type == MessageType.NumberQuestion ||
                 item.type == MessageType.MapQuestion ||
                 item.type == MessageType.MultipleChoice) questionAmount++;
+
+        ProgressBarSetter.SetQuestionsTotal(questionAmount);
     }
 
     public void NextMessage()
@@ -47,6 +49,7 @@ public class SurveyManager : MonoBehaviour
 
         if (listId == _questions.Count) ProgressBarSetter.SetProgressBar(1f);
         else if (questionId > 0) ProgressBarSetter.SetProgressBar(questionId / questionAmount);
+        ProgressBarSetter.SetQuestionsLeft((int)questionId);
 
         StartCoroutine(IShowMessage());
     }
@@ -78,9 +81,13 @@ public class SurveyManager : MonoBehaviour
         else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers, question.isRadioButton);
         else if (question.type == MessageType.MapQuestion) MessageCreator.CreateUserMap();
 
-        if (question.type == MessageType.OpenQuestion || 
+        if (question.type == MessageType.OpenQuestion ||
             question.type == MessageType.MultipleChoice &&
-            !question.isRadioButton) InputManager.ToggleSending(true);
+            !question.isRadioButton)
+        {
+            InputManager.ToggleSending(true);
+            InputManager.SendUserMessage();
+        }
 
         IncreaseProgressBarID(question);
 

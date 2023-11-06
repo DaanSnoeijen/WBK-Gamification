@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -49,13 +47,13 @@ public class CircleSliderLogic : MonoBehaviour
         return Quaternion.FromToRotation(Vector3.up, to - from).eulerAngles.z;
     }
 
-    public void ButtonUp() 
+    public void ButtonDown() 
     { 
         pressed = true;
         ButtonAnimator.SetTrigger("Tap");
     }
 
-    public void ButtonDown() 
+    public void ButtonUp() 
     { 
         pressed = false;
         ButtonAnimator.SetTrigger("Release");
