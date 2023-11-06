@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor.Presets;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,6 @@ public class NormalSliderLogic : MonoBehaviour
 
     CircleSliderContentLinker Linker;
 
-    bool pressed;
     bool continued;
 
     int maxSliderValue;
@@ -26,22 +26,17 @@ public class NormalSliderLogic : MonoBehaviour
         maxSliderValue = Linker.GetMaxValue();
     }
 
-    private void Update()
+    public void SetNumber() { Text.text = CalculateInputNumber(); }
+
+    string CalculateInputNumber() { return Mathf.Round(maxSliderValue * Slider.value).ToString(); }
+
+    public void ButtonDown()
     {
-        if (pressed) Text.text = CalculateInputNumber(maxSliderValue);
-    }
-
-    string CalculateInputNumber(int maxValue) { return Mathf.Round(maxValue * (Slider.value / 360f)).ToString(); }
-
-    public void ButtonUp() 
-    { 
-        pressed = true;
         ButtonAnimator.SetTrigger("Tap");
     }
 
-    public void ButtonDown() 
-    { 
-        pressed = false;
+    public void ButtonUp()
+    {
         ButtonAnimator.SetTrigger("Release");
         if (!continued) Linker.NextMessage();
         continued = true;

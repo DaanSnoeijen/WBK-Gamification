@@ -1181,7 +1181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.454605, y: -16.58252}
+  m_AnchoredPosition: {x: -18.45459, y: -16.58252}
   m_SizeDelta: {x: -77.121, y: -324.0676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &135902521
@@ -7309,11 +7309,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Meer munten = meer prijs!
+  m_text: 'Meer munten = ...
 
 
-    1000 munten kunnen ingeleverd worden voor
-    een 5 euro Bol.com waardebon.
+    Er wordt nog onderzocht of het gebruik van munten
+    een toevoeging is en hoe.
 
     Rond de vragenlijst af voor meer munten!'
   m_isRightToLeft: 0
@@ -9495,56 +9495,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 1
-    text: Hey, mijn naam is Fleur. Leuk dat je meedoet!
+    text: Hey, mijn naam is Fleur. Welkom bij de vragenlijst en leuk dat je meedoet!
     maxValue: 5
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
   - type: 4
-    text: Maak je geen zorgen om je antwoorden in dit prototype. Ze worden niet opgeslagen.
-    maxValue: 0
-    _answers: []
-    isRadioButton: 0
-    userCanSendMessage: 0
-  - type: 0
-    text: Laten we beginnen met het volgende. Wat vind je van Area51?
+    text: Je kunt je antwoorden aanpassen voordat je ze opstuurt. Maak je daarom
+      geen zorgen om wat je invult! (De volgende vragen zijn test vragen)
     maxValue: 0
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 1
-  - type: 2
-    text: Hoe vaak kom je hier?
-    maxValue: 10
-    _answers:
-    - Meerdere malen per week
-    - Wekelijks
-    - Maandelijks
-    - Een paar keer per jaar
-    - Bijna nooit
-    - Dit is mijn eerste bezoek
-    isRadioButton: 1
+  - type: 3
+    text: Laten we beginnen met het volgende. Waar woon je?
+    maxValue: 0
+    _answers: []
+    isRadioButton: 0
     userCanSendMessage: 0
   - type: 2
-    text: Voor wie bezoek je Area51?
+    text: En wat vind je van de beweging faciliteiten in je buurt? Denk aan speeltuintjes
+      of voetbalveldjes.
     maxValue: 0
     _answers:
-    - Voor mezelf
-    - Voor anderen
-    - Verschilt per bezoek
+    - Geweldig
+    - Leuk
+    - Matig
+    - Saai
+    - Verschrikkelijk
     isRadioButton: 1
     userCanSendMessage: 0
   - type: 1
-    text: Welk cijfer geef je Area51 op een schaal van 1 tot 10?
+    text: Welk cijfer geef je deze beweging faciliteiten?
     maxValue: 10
-    _answers: []
+    _answers:
+    - Voetbalveld
+    - Basketbalveld
+    - BMX-baan
+    - Speeltuin
     isRadioButton: 0
     userCanSendMessage: 0
-  - type: 4
-    text: Top, heel erg bedankt voor je deelname!
+  - type: 6
+    text: Lekker bezig, je bent al over de helft!
     maxValue: 0
-    _answers: []
+    _answers:
+    - Voetbalveld
+    - Basketbalveld
+    - BMX-baan
+    - Speeltuin
     isRadioButton: 0
     userCanSendMessage: 0
+  - type: 2
+    text: Wat zou je het liefst terug zien in je wijk?
+    maxValue: 0
+    _answers:
+    - Voetbalveld
+    - Basketbalveld
+    - BMX-baan
+    - Speeltuin
+    isRadioButton: 0
+    userCanSendMessage: 0
+  - type: 0
+    text: Kun je me vertellen waarom?
+    maxValue: 0
+    _answers:
+    - Voetbalveld
+    - Basketbalveld
+    - BMX-baan
+    - Speeltuin
+    isRadioButton: 0
+    userCanSendMessage: 1
+  - type: 4
+    text: Helemaal top. Bedankt voor je antwoorden!
+    maxValue: 0
+    _answers:
+    - Voetbalveld
+    - Basketbalveld
+    - BMX-baan
+    - Speeltuin
+    isRadioButton: 0
+    userCanSendMessage: 1
   MessageCreator: {fileID: 1476029144}
   InputManager: {fileID: 443404547}
   ProgressBarSetter: {fileID: 1743654848}
@@ -11682,7 +11712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1029215902
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12239,7 +12269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1109403508
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12280,7 +12310,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Verzamel 1000 munten voor een \n\u20AC5 Bol.com waardebon!"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -18618,7 +18648,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4285953654
+    rgba: 4288980132
   m_fontColor: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -18757,7 +18787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &6383002725853717967
 GameObject:
   m_ObjectHideFlags: 0
