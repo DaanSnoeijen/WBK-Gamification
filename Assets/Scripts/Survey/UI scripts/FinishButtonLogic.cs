@@ -6,6 +6,7 @@ public class FinishButtonLogic : MonoBehaviour
 {
     [Header("Rewards for finishing")]
     [SerializeField] FinishRewards FinishRewards;
+    [SerializeField] StarAnimation StarAnimation;
 
     [Header("Check survey answers")]
     [SerializeField] SurveyChecker SurveyChecker;
@@ -20,6 +21,8 @@ public class FinishButtonLogic : MonoBehaviour
     [SerializeField] GameObject FinishPanel;
     [SerializeField] GameObject EndPanel;
     [SerializeField] GameObject FinishBack;
+
+    bool animPlayed;
 
     public void ShowFinishScreen(bool show) { StartCoroutine(IShowFinishScreen(show)); }
 
@@ -42,6 +45,11 @@ public class FinishButtonLogic : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             FinishBack.SetActive(true);
+
+            if (animPlayed) yield break;
+
+            StarAnimation.StartAnimation();
+            animPlayed = true;
         }
         else
         {
