@@ -20,23 +20,25 @@ public class StarAnimation : MonoBehaviour
     [SerializeField] Animator StarAnimatorMiddle;
     [SerializeField] Animator StarAnimatorRight;
 
+    Color StarColor = new Color(1f, 1f, 1f, 1f);
+
     public void StartAnimation() { StartCoroutine(IStarAnimation()); }
 
     IEnumerator IStarAnimation()
     {
         StarAnimatorLeft.SetTrigger("Show");
         yield return new WaitForSeconds(0.5f);
-        StarLeft.color = new Color(1f, 1f, 1f, 1f);
+        StarLeft.color = StarColor;
         StarFXLeft.Play();
 
         StarAnimatorMiddle.SetTrigger("Show");
         yield return new WaitForSeconds(0.5f);
-        StarMiddle.color = new Color(1f, 1f, 1f, 1f);
+        StarMiddle.color = StarColor;
         StarFXMiddle.Play();
 
         StarAnimatorRight.SetTrigger("Show");
         yield return new WaitForSeconds(0.5f);
-        StarRight.color = new Color(1f, 1f, 1f, 1f);
+        StarRight.color = StarColor;
         StarFXRight.Play();
     }
 }
