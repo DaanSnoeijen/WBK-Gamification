@@ -12196,11 +12196,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Meer munten = ...
+  m_text: 'Meer munten = meer prijs
 
 
-    Er wordt nog onderzocht of het gebruik van munten
-    een toevoeging is en hoe.
+    Ontvang een 5 euro Bol.com tegoed bij 1000
+    munten
+
 
     Rond de vragenlijst af voor meer munten!'
   m_isRightToLeft: 0
@@ -22147,7 +22148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: Nog 800 munten voor een 5 euro Bol.com tegoed!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -31385,12 +31386,6 @@ MonoBehaviour:
   ProgressBar: {fileID: 1070130892}
   ProgressBarBack: {fileID: 1743654846}
   QuestionsLeft: {fileID: 870229449}
-  Star1: {fileID: 0}
-  Star2: {fileID: 0}
-  Star3: {fileID: 0}
-  StarAnimator1: {fileID: 0}
-  StarAnimator2: {fileID: 0}
-  StarAnimator3: {fileID: 0}
 --- !u!1 &1754367702
 GameObject:
   m_ObjectHideFlags: 0
