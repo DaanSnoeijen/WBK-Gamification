@@ -7,6 +7,8 @@ public class FinishButtonLogic : MonoBehaviour
     [Header("Rewards for finishing")]
     [SerializeField] FinishRewards FinishRewards;
     [SerializeField] StarAnimation StarAnimation;
+    [SerializeField] CoinBarLogic CoinBarLogic;
+    [SerializeField] UserProfile UserProfile;
 
     [Header("Check survey answers")]
     [SerializeField] SurveyChecker SurveyChecker;
@@ -46,10 +48,10 @@ public class FinishButtonLogic : MonoBehaviour
             yield return new WaitForSeconds(1f);
             FinishBack.SetActive(true);
 
-            if (animPlayed) yield break;
+            //if (animPlayed) yield break;
 
-            StarAnimation.StartAnimation();
-            animPlayed = true;
+            //StarAnimation.StartAnimation();
+            //animPlayed = true;
         }
         else
         {
@@ -73,6 +75,8 @@ public class FinishButtonLogic : MonoBehaviour
 
         FinishPanel.SetActive(false);
 
-        FinishRewards.GiveExperience(true, true);
+        CoinBarLogic.SetProgressBar(UserProfile.ReturnPrizePercent());
+
+        //FinishRewards.GiveExperience(true, true);
     }
 }

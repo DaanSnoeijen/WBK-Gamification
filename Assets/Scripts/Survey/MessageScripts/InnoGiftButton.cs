@@ -13,6 +13,12 @@ public class InnoGiftButton : MonoBehaviour
     [Header("Click effects")]
     [SerializeField] ParticleSystem CoinsEffect;
 
+    private void Start()
+    {
+        CoinsEffect.Play();
+        GetComponentInParent<UpdateCoins>().ShowNewCoins(100);
+    }
+
     public void PressGift() 
     { 
         GiftAnimator.SetTrigger("Press");

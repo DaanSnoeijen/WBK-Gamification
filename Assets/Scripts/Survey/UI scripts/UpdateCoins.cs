@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class UpdateCoins : MonoBehaviour
 {
+    [Header("User profile to update coins")]
+    [SerializeField] UserProfile UserProfile;
+
     [Header("Coin pop up animator")]
     [SerializeField] Animator PopupAnimator;
 
@@ -19,6 +21,8 @@ public class UpdateCoins : MonoBehaviour
 
     IEnumerator IShowNewCoins(int newCoins)
     {
+        UserProfile.SetCoins(newCoins);
+
         PopupObject.SetActive(true);
         PopupAnimator.SetTrigger("Show");
 
