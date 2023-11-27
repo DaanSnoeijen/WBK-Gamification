@@ -13,6 +13,8 @@ public class CoinBarLogic : MonoBehaviour
 
     float oldValue;
     float stepValue;
+    float percent;
+    float coinsLeft = 500f;
     float fractionValue = 20f;
 
     int loopRate = 80;
@@ -21,14 +23,18 @@ public class CoinBarLogic : MonoBehaviour
 
     IEnumerator IProgressBarAnim(float newValue)
     {
-        float coinsLeft;
-
         for (int i = 0; i < loopRate; i++)
         {
             oldValue = CoinBar.fillAmount;
 
             stepValue = (newValue / 100f - oldValue) / fractionValue;
             CoinBar.fillAmount += stepValue;
+
+            percent += (newValue - oldValue * 100f) / fractionValue;
+            Percentage.text = Mathf.Round(percent) + "%";
+
+            coinsLeft -= 1;
+            PrizeText.text = "Nog " + Mathf.Round(coinsLeft) + " munten te gaan voor een 5 euro Bol.com tegoed!";
 
             yield return new WaitForSeconds(1f / loopRate);
         }
