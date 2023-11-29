@@ -11,14 +11,10 @@ public class InputManager : MonoBehaviour
 
     [Header("Input field toggling")]
     [SerializeField] Image SendButtonImage;
-    [SerializeField] Image SendButtonBackImage;
     [SerializeField] Button SendButton;
 
     Color ButtonOnColor = new Color(0.99f, 0.36f, 0f);
     Color ButtonOffColor = new Color(0.29f, 0.29f, 0.29f);
-
-    Color ButtonBackOnColor = new Color(0.83f, 0.3f, 0f);
-    Color ButtonBackOffColor = new Color(0.211f, 0.211f, 0.211f);
 
     bool send;
 
@@ -37,12 +33,10 @@ public class InputManager : MonoBehaviour
         if (state)
         {
             SendButtonImage.color = ButtonOnColor;
-            SendButtonBackImage.color = ButtonBackOnColor;
         }
         else
         {
             SendButtonImage.color = ButtonOffColor;
-            SendButtonBackImage.color = ButtonBackOffColor;
         }
     }
 }
