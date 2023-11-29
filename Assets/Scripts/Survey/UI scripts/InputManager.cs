@@ -30,13 +30,7 @@ public class InputManager : MonoBehaviour
     {
         SendButton.enabled = state;
 
-        if (state)
-        {
-            SendButtonImage.color = ButtonOnColor;
-        }
-        else
-        {
-            SendButtonImage.color = ButtonOffColor;
-        }
+        if (state) SendButtonImage.color = ButtonOnColor;
+        else SendButtonImage.color = ButtonOffColor;
     }
 }

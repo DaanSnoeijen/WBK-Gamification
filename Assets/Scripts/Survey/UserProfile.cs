@@ -8,7 +8,7 @@ public class UserProfile : MonoBehaviour
 
     public float coins { get; private set; }
 
-    public void SetCoins(int setAmount) { coins = setAmount; }
+    public void AddCoins(int addAmount) { coins += addAmount; }
 
     public float ReturnPrizePercent() { return coins / prizePrice * 100f; }
 }

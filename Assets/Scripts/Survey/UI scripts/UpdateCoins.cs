@@ -21,7 +21,7 @@ public class UpdateCoins : MonoBehaviour
 
     IEnumerator IShowNewCoins(int newCoins)
     {
-        UserProfile.SetCoins(newCoins);
+        UserProfile.AddCoins(newCoins);
 
         PopupObject.SetActive(true);
         PopupAnimator.SetTrigger("Show");
