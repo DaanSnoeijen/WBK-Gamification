@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class AnnouncementLogic : MonoBehaviour
 {
-    [SerializeField] GameObject AnnouncementFull;
-    [SerializeField] GameObject Messages;
+    [SerializeField] Animator SwipeAnimator;
 
-    [SerializeField] Animator AnnouncementFullAnimator;
-    [SerializeField] Animator MessagesAnimator;
+    [SerializeField] GameObject LikeFront;
+    [SerializeField] GameObject DislikeFront;
 
-    public void ShowFull(bool show) { StartCoroutine(IShowFull(show)); }
-
-    IEnumerator IShowFull(bool show)
+    public void Like(bool like)
     {
-        if (show)
+        if (like)
         {
-            AnnouncementFull.SetActive(true);
-            AnnouncementFullAnimator.SetTrigger("Show");
-            MessagesAnimator.SetTrigger("Hide");
-
-            yield return new WaitForSeconds(1f);
-            Messages.SetActive(false);
+            SwipeAnimator.SetTrigger("Like");
+            LikeFront.SetActive(false);
+            DislikeFront.SetActive(true);
         }
         else
         {
-            AnnouncementFull.SetActive(false);
+            SwipeAnimator.SetTrigger("Dislike");
+            LikeFront.SetActive(true);
+            DislikeFront.SetActive(false);
         }
     }
 }
