@@ -13,6 +13,24 @@ public class AnnouncementFullLogic : MonoBehaviour
     [SerializeField] Animator MessagesAnimator;
     [SerializeField] Animator SwitchAnimator;
 
+    [Header("Animation components")]
+    [SerializeField] Animator SwipeAnimator;
+    [SerializeField] Animator LikeSwipeAnimator;
+
+    public void Like(bool like)
+    {
+        if (like)
+        {
+            SwipeAnimator.SetTrigger("Like");
+            LikeSwipeAnimator.SetTrigger("Like");
+        }
+        else
+        {
+            SwipeAnimator.SetTrigger("Dislike");
+            LikeSwipeAnimator.SetTrigger("Dislike");
+        }
+    }
+
     public void ShowFull(bool show) { StartCoroutine(IShowFull(show)); }
 
     IEnumerator IShowFull(bool show)

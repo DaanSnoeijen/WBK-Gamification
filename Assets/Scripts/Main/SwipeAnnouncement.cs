@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class SwipeAnnouncement : MonoBehaviour
 {
-    [SerializeField] GameObject SwipeObject;
-    [SerializeField] AnnouncementLogic AnnouncementLogic;
+    [Header("Methods to trigger after swiping")]
+    [SerializeField] UnityEvent LikeEvent;
+    [SerializeField] UnityEvent DislikeEvent;
+
+    [Header("Components for proper raycasting")]
     [SerializeField] GraphicRaycaster GraphicRaycaster;
     [SerializeField] EventSystem EventSystem;
 
@@ -41,7 +45,7 @@ public class SwipeAnnouncement : MonoBehaviour
                     {
                         startPos = new Vector2(t.position.x / Screen.width, t.position.y / Screen.width);
                     }
-                    if (t.phase == TouchPhase.Moved && !animDone)
+                    else if (t.phase == TouchPhase.Moved && !animDone)
                     {
                         Vector2 endPos = new Vector2(t.position.x / Screen.width, t.position.y / Screen.width);
 
@@ -51,13 +55,13 @@ public class SwipeAnnouncement : MonoBehaviour
 
                         if (Mathf.Abs(swipe.x) > Mathf.Abs(swipe.y))
                         {
-                            if (swipe.x > 0) AnnouncementLogic.Like(true);
-                            else AnnouncementLogic.Like(false);
+                            if (swipe.x > 0) LikeEvent.Invoke();
+                            else DislikeEvent.Invoke();
 
                             animDone = true;
                         }
                     }
-                    if (t.phase == TouchPhase.Ended) animDone = false;
+                    else if (t.phase == TouchPhase.Ended) animDone = false;
                 }
             }
         }
