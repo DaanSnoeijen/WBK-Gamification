@@ -3592,6 +3592,10 @@ PrefabInstance:
       propertyPath: AnnouncementFullAnimator
       value: 
       objectReference: {fileID: 846112576}
+    - target: {fileID: 4986392135735439928, guid: 71f29d2333f65484091e88f2b25da8e9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.1832886
+      objectReference: {fileID: 0}
     - target: {fileID: 6883313334518651144, guid: 71f29d2333f65484091e88f2b25da8e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -6736,6 +6740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1711025918}
+  - component: {fileID: 1711025919}
   m_Layer: 5
   m_Name: SwitchButton
   m_TagString: Untagged
@@ -6767,6 +6772,27 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 146}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1711025919
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711025917}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9d63ba1bc9f48d94ea2ff5900cc49f39, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1744200470 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4688939975933322664, guid: 71f29d2333f65484091e88f2b25da8e9, type: 3}
