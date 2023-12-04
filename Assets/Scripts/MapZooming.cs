@@ -6,7 +6,11 @@ using UnityEngine.UI;
 
 public class MapZooming : MonoBehaviour
 {
+    [Header("Scroll view to zoom")]
     [SerializeField] ScrollRect scrollRect;
+
+    [Header("Marker compilers if necessary")]
+    [SerializeField] List<MarkerCompiler> _MarkerCompilers;
 
     float zoomSpeedPinch = 0.005f;
     float zoomSpeedMouseScrollWheel = 0.05f;
@@ -58,6 +62,15 @@ public class MapZooming : MonoBehaviour
             scaleX = Mathf.Clamp(scaleX, zoomMin, zoomMax);
 
             transform.localScale = new Vector3(scaleX, scaleX, transform.localScale.z);
+            CheckZoom(scaleX);
         }
+    }
+
+    void CheckZoom(float scale)
+    {
+        if (_MarkerCompilers.Count == 0) return;
+
+        if (scale > 2f) foreach (MarkerCompiler item in _MarkerCompilers) item.SwitchMarkerView(true);
+        else foreach (MarkerCompiler item in _MarkerCompilers) item.SwitchMarkerView(false);
     }
 }

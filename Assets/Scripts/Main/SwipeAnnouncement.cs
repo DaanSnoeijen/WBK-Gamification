@@ -32,7 +32,6 @@ public class SwipeAnnouncement : MonoBehaviour
             PointerEventData.position = Input.GetTouch(0).position;
 
             List<RaycastResult> results = new List<RaycastResult>();
-
             GraphicRaycaster.Raycast(PointerEventData, results);
 
             foreach (RaycastResult result in results)
@@ -48,7 +47,6 @@ public class SwipeAnnouncement : MonoBehaviour
                     else if (t.phase == TouchPhase.Moved && !animDone)
                     {
                         Vector2 endPos = new Vector2(t.position.x / Screen.width, t.position.y / Screen.width);
-
                         Vector2 swipe = new Vector2(endPos.x - startPos.x, endPos.y - startPos.y);
 
                         if (swipe.magnitude < MIN_SWIPE_DISTANCE) return;
