@@ -5,14 +5,24 @@ using UnityEngine;
 public class MarkerAnnouncementLogic : MonoBehaviour
 {
     [SerializeField] Animator MarkerAnnouncementAnimator;
+    [SerializeField] Animator ListAnnouncementAnimator;
 
-    bool show;
+    bool mShow;
+    bool lShow;
 
     public void ShowMAnnouncement()
     {
-        show = !show;
+        mShow = !mShow;
 
-        if (show) MarkerAnnouncementAnimator.SetTrigger("Show");
+        if (mShow) MarkerAnnouncementAnimator.SetTrigger("Show");
+        else MarkerAnnouncementAnimator.SetTrigger("Hide");
+    }
+
+    public void ShowLAnnouncements()
+    {
+        lShow = !lShow;
+
+        if (lShow) MarkerAnnouncementAnimator.SetTrigger("Show");
         else MarkerAnnouncementAnimator.SetTrigger("Hide");
     }
 }
