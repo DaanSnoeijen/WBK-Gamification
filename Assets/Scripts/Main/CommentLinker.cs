@@ -5,8 +5,7 @@ using UnityEngine.UIElements;
 
 public class CommentLinker : MonoBehaviour
 {
-    [Header("Components to link")]
-    [SerializeField] CommentCreator CommentCreator;
+    CommentCreator CommentCreator;
 
     void Start()
     {

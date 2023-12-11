@@ -353,6 +353,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5683178407246503716}
   - component: {fileID: 7918025908721111548}
+  - component: {fileID: 2390403569678910206}
   m_Layer: 5
   m_Name: Comment
   m_TagString: Untagged
@@ -397,7 +398,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3381415f1c698b947b0b1957f5b41307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CommentCreator: {fileID: 0}
+--- !u!95 &2390403569678910206
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4216664993467906877}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 04ea8a7ed5a6bd14e923e8e024b6bd5b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4324752009010075649
 GameObject:
   m_ObjectHideFlags: 0
