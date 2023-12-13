@@ -177,18 +177,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 8582820225367032535}
-        m_TargetAssemblyTypeName: InnoGiftButton, Assembly-CSharp
-        m_MethodName: PressFinish
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!1 &3602795788663923108
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +521,7 @@ MonoBehaviour:
   ClickMessage: {fileID: 2686394414928380808}
   Button: {fileID: 3625836208979410372}
   CoinsEffect: {fileID: 1987504094427107386}
+  show: 1
 --- !u!1 &7114318547820358560
 GameObject:
   m_ObjectHideFlags: 0

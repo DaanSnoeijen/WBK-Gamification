@@ -13,10 +13,16 @@ public class InnoGiftButton : MonoBehaviour
     [Header("Click effects")]
     [SerializeField] ParticleSystem CoinsEffect;
 
+    [Header("Should the coins immediately show?")]
+    [SerializeField] bool show;
+
     private void Start()
     {
-        CoinsEffect.Play();
-        GetComponentInParent<UpdateCoins>().ShowNewCoins(100);
+        if (show)
+        {
+            CoinsEffect.Play();
+            GetComponentInParent<UpdateCoins>().ShowNewCoins(100);
+        }
     }
 
     public void PressGift() 
