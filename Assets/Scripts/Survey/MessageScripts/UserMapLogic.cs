@@ -20,7 +20,7 @@ public class UserMapLogic : MonoBehaviour
     public void SetPointer()
     {
         Vector2 position = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-        position.y += 457;
+        position.y += 446;
         position.x -= 567;
         Pointer.anchoredPosition = position;
 
