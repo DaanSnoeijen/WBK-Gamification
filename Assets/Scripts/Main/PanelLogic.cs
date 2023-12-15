@@ -31,9 +31,9 @@ public class PanelLogic : MonoBehaviour
         {
             PanelAnimator.SetTrigger("Hide");
             BackAnimator.SetTrigger("Open");
+            BackButton.SetActive(false);
             yield return new WaitForSeconds(1f);
 
-            BackButton.SetActive(false);
             BackPanel.SetActive(false);
             Panel.SetActive(false);
         }
