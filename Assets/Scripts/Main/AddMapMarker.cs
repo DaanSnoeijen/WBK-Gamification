@@ -6,9 +6,8 @@ using UnityEngine;
 public class AddMapMarker : MonoBehaviour
 {
     [Header("New marker attributes")]
-    [SerializeField] RectTransform NewMarker;
-    [SerializeField] Animator MarkerAnimator;
-    [SerializeField] ParticleSystem SmokeEffect;
+    [SerializeField] GameObject NewMarker;
+    [SerializeField] Transform ParentObject;
 
     bool canPlace;
 
@@ -18,13 +17,14 @@ public class AddMapMarker : MonoBehaviour
     {
         if (canPlace)
         {
-            Vector2 position = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            position.y += 1065;
-            position.x -= 1490;
-            NewMarker.anchoredPosition = position;
+            Vector2 newPosition = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+            newPosition.y += 1065;
+            newPosition.x -= 1490;
 
-            MarkerAnimator.SetTrigger("Land");
-            SmokeEffect.Play();
+            GameObject newMarker = Instantiate(NewMarker, ParentObject);
+            newMarker.GetComponent<RectTransform>().anchoredPosition = newPosition;
+            newMarker.GetComponentInChildren<Animator>().SetTrigger("Land");
+            newMarker.GetComponentInChildren<ParticleSystem>().Play();
         }
     }
 }

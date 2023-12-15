@@ -10,6 +10,7 @@ public class IdeaSelection : MonoBehaviour
     [SerializeField] ParticleSystem SmokeEffect;
 
     [Header("Idea object parenting")]
+    [SerializeField] RectTransform IdeaObjectRect;
     [SerializeField] Transform IdeaObject;
     [SerializeField] Transform NewParent;
     [SerializeField] Transform OldParent;
@@ -18,6 +19,7 @@ public class IdeaSelection : MonoBehaviour
 
     IEnumerator ISelectIdea()
     {
+        Vector2 oldPosition = IdeaObjectRect.anchoredPosition;
         IdeaObject.SetParent(NewParent);
         IdeaAnimator.SetTrigger("Select");
 
@@ -27,5 +29,6 @@ public class IdeaSelection : MonoBehaviour
 
         yield return new WaitForSeconds(3f);
         IdeaObject.SetParent(OldParent);
+        IdeaObjectRect.anchoredPosition = oldPosition;
     }
 }
