@@ -7,5 +7,13 @@ public class AnimationPlayer : MonoBehaviour
     [Header("Animation to play")]
     [SerializeField] Animator Animator;
 
-    public void PlayAnim(string triggerName) { Animator.SetTrigger(triggerName); }
+    bool trigger;
+
+    public void PlayTrigger(string triggerName) { Animator.SetTrigger(triggerName); }
+
+    public void ToggleTrigger()
+    {
+        trigger = !trigger;
+        Animator.SetTrigger(trigger.ToString());
+    }
 }
