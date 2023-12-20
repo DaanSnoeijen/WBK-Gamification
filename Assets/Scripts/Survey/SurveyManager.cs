@@ -31,7 +31,6 @@ public class SurveyManager : MonoBehaviour
     float waitTyping = 1.2f;
 
     bool choiceOpen;
-    bool isShort;
 
     private void Start()
     {
@@ -81,11 +80,11 @@ public class SurveyManager : MonoBehaviour
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);
         else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers, question.isRadioButton, choiceOpen);
         else if (question.type == MessageType.MapQuestion) MessageCreator.CreateUserMap();
-        else if (question.type == MessageType.OpenQuestion) MessageCreator.CreateUserMessage(question.isShort);
-
-        if (question.type == MessageType.OpenQuestion ||
-            question.type == MessageType.MultipleChoice &&
-            !question.isRadioButton) InputManager.ToggleSending(true);
+        else if (question.type == MessageType.OpenQuestion)
+        {
+            MessageCreator.CreateUserMessage(question.isShort);
+            InputManager.ToggleSending(true);
+        }
 
         IncreaseProgressBarID(question);
 

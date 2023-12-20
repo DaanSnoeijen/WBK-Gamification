@@ -29,6 +29,9 @@ public class MessageCreator : MonoBehaviour
     [Header("For linking slider content dynamically")]
     [SerializeField] CircleSliderContentLinker SliderLinker;
 
+    [Header("Dynamic multiple choice input linker")]
+    [SerializeField] InputManager InputManager;
+
     float scrollBottomPosition = 0;
 
     public void CreateInnoMessage(string text, MessageType type)
@@ -74,7 +77,7 @@ public class MessageCreator : MonoBehaviour
         else message = Instantiate(UserMessage, ScrollViewContent.transform);
 
         TMP_InputField field = message.GetComponentInChildren<TMP_InputField>();
-        SurveyChecker.AddUserText(field);
+        //SurveyChecker.AddUserText(field);
 
         SetScrollBottom(message, 1);
 
@@ -84,8 +87,6 @@ public class MessageCreator : MonoBehaviour
     public void CreateChoiceOpen()
     {
         GameObject message = Instantiate(MultipleChoiceOpen, ScrollViewContent.transform);
-        TMP_InputField field = message.GetComponentInChildren<TMP_InputField>();
-        SurveyChecker.AddUserText(field);
 
         SetScrollBottom(message, 1);
 
@@ -144,6 +145,7 @@ public class MessageCreator : MonoBehaviour
         if (choiceOpen) CreateChoiceOpen();
         else Instantiate(SpaceFiller, ScrollViewContent.transform);
 
+        if (!isRadio) InputManager.ToggleSending(true);
         foreach (var item in closedQuestions) item.SetAnswerGroup(closedQuestions);
     }
 }

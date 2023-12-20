@@ -48,10 +48,11 @@ public class FinishButtonLogic : MonoBehaviour
             yield return new WaitForSeconds(1f);
             FinishBack.SetActive(true);
 
-            //if (animPlayed) yield break;
+            if (animPlayed) yield break;
 
+            CoinBarLogic.SetProgressBar(UserProfile.ReturnPrizePercent());
+            animPlayed = true;
             //StarAnimation.StartAnimation();
-            //animPlayed = true;
         }
         else
         {
@@ -74,8 +75,6 @@ public class FinishButtonLogic : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         FinishPanel.SetActive(false);
-
-        CoinBarLogic.SetProgressBar(UserProfile.ReturnPrizePercent());
 
         //FinishRewards.GiveExperience(true, true);
     }

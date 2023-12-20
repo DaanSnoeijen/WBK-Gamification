@@ -26,7 +26,7 @@ public class ClosedQuestionLogic : MonoBehaviour
     {
         MessageBackSize.sizeDelta = new Vector2(255, ThisSize.sizeDelta.y / 2f + 5);
         MessageBackSize.position = new Vector3(MessageBackSize.position.x,
-            MessageBackSize.position.y - (ThisSize.sizeDelta.y - 53.52f) / 4850f, 
+            MessageBackSize.position.y - (ThisSize.sizeDelta.y - 50f) / 4550f, 
             MessageBackSize.position.z);
     }
 
