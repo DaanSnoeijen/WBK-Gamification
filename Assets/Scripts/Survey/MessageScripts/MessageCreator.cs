@@ -16,6 +16,8 @@ public class MessageCreator : MonoBehaviour
     [SerializeField] GameObject InnoGift;
     [SerializeField] GameObject InnoFinish;
     [SerializeField] GameObject UserMessage;
+    [SerializeField] GameObject UserMessageShort;
+    [SerializeField] GameObject MultipleChoiceOpen;
     [SerializeField] GameObject UserNumber;
     [SerializeField] GameObject UserClosedAnswer;
     [SerializeField] GameObject UserMap;
@@ -65,9 +67,23 @@ public class MessageCreator : MonoBehaviour
         return message;
     }
 
-    public void CreateUserMessage()
+    public void CreateUserMessage(bool isShort)
     {
-        GameObject message = Instantiate(UserMessage, ScrollViewContent.transform);
+        GameObject message;
+        if (isShort) message = Instantiate(UserMessageShort, ScrollViewContent.transform);
+        else message = Instantiate(UserMessage, ScrollViewContent.transform);
+
+        TMP_InputField field = message.GetComponentInChildren<TMP_InputField>();
+        SurveyChecker.AddUserText(field);
+
+        SetScrollBottom(message, 1);
+
+        Instantiate(SpaceFiller, ScrollViewContent.transform);
+    }
+
+    public void CreateChoiceOpen()
+    {
+        GameObject message = Instantiate(MultipleChoiceOpen, ScrollViewContent.transform);
         TMP_InputField field = message.GetComponentInChildren<TMP_InputField>();
         SurveyChecker.AddUserText(field);
 
@@ -85,7 +101,7 @@ public class MessageCreator : MonoBehaviour
         Instantiate(SpaceFiller, ScrollViewContent.transform);
     }
 
-    public void CreateClosedAnswers(List<string> _answers, bool isRadio) { StartCoroutine(IClosedAnswerAnim(_answers, isRadio)); }
+    public void CreateClosedAnswers(List<string> _answers, bool isRadio, bool choiceOpen) { StartCoroutine(IClosedAnswerAnim(_answers, isRadio, choiceOpen)); }
 
     public void CreateUserMap()
     {
@@ -108,7 +124,7 @@ public class MessageCreator : MonoBehaviour
         ScrollViewRect.verticalNormalizedPosition = scrollBottomPosition;
     }
 
-    IEnumerator IClosedAnswerAnim(List<string> _answers, bool isRadio)
+    IEnumerator IClosedAnswerAnim(List<string> _answers, bool isRadio, bool choiceOpen)
     {
         List<ClosedQuestionLogic> closedQuestions = new List<ClosedQuestionLogic>();
 
@@ -125,8 +141,9 @@ public class MessageCreator : MonoBehaviour
             yield return new WaitForSeconds(0.2f);
         }
 
-        foreach (var item in closedQuestions) item.SetAnswerGroup(closedQuestions);
+        if (choiceOpen) CreateChoiceOpen();
+        else Instantiate(SpaceFiller, ScrollViewContent.transform);
 
-        Instantiate(SpaceFiller, ScrollViewContent.transform);
+        foreach (var item in closedQuestions) item.SetAnswerGroup(closedQuestions);
     }
 }

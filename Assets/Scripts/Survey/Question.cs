@@ -31,4 +31,7 @@ public class Question
     public List<string> _answers;
     public bool isRadioButton;
     public bool userCanSendMessage = true;
+
+    [Header("Is the open question long or short?")]
+    public bool isShort;
 }

@@ -30,10 +30,11 @@ public class SurveyManager : MonoBehaviour
     float waitInBetween = 0.5f;
     float waitTyping = 1.2f;
 
+    bool choiceOpen;
+    bool isShort;
+
     private void Start()
     {
-        NextMessage();
-
         foreach (Question item in _questions) if (item.type == MessageType.OpenQuestion ||
                 item.type == MessageType.NumberQuestion ||
                 item.type == MessageType.MapQuestion ||
@@ -72,22 +73,19 @@ public class SurveyManager : MonoBehaviour
             yield break;
         }
         MessageCreator.CreateInnoMessage(question.text, question.type);
-        InputManager.SetUserCanSendMessage(question.userCanSendMessage);
+        choiceOpen = question.userCanSendMessage;
 
         if (question.type == MessageType.Message ||
             question.type == MessageType.DebugFinish) NextMessage();
 
         else if (question.type == MessageType.NumberQuestion) MessageCreator.CreateUserNumberInput(question.maxValue);
-        else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers, question.isRadioButton);
+        else if (question.type == MessageType.MultipleChoice) MessageCreator.CreateClosedAnswers(question._answers, question.isRadioButton, choiceOpen);
         else if (question.type == MessageType.MapQuestion) MessageCreator.CreateUserMap();
+        else if (question.type == MessageType.OpenQuestion) MessageCreator.CreateUserMessage(question.isShort);
 
         if (question.type == MessageType.OpenQuestion ||
             question.type == MessageType.MultipleChoice &&
-            !question.isRadioButton)
-        {
-            InputManager.ToggleSending(true);
-            InputManager.SendUserMessage();
-        }
+            !question.isRadioButton) InputManager.ToggleSending(true);
 
         IncreaseProgressBarID(question);
 

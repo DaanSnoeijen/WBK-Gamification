@@ -70,7 +70,7 @@ MonoBehaviour:
   m_text: '
 
 
-    Tik om te bewerken...
+    Tik hier om te typen...
 
 
 
@@ -507,7 +507,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 473.9297, y: 206.9859}
+  m_SizeDelta: {x: 473.9297, y: 53.5238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &280780689512054105
 CanvasRenderer:
@@ -627,9 +627,9 @@ GameObject:
   - component: {fileID: 6572864602052385836}
   - component: {fileID: 834853741304843589}
   - component: {fileID: 4306731676345444843}
-  - component: {fileID: 8539592825347429274}
+  - component: {fileID: 6997150022583740372}
   m_Layer: 5
-  m_Name: UserMessage
+  m_Name: UserMessageShort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -717,7 +717,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8539592825347429274
+--- !u!114 &6997150022583740372
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
