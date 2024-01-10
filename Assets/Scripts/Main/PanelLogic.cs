@@ -24,7 +24,7 @@ public class PanelLogic : MonoBehaviour
             PanelAnimator.SetTrigger("Show");
             BackAnimator.SetTrigger("Close");
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0f);
             BackButton.SetActive(true);
         }
         else
@@ -32,7 +32,7 @@ public class PanelLogic : MonoBehaviour
             PanelAnimator.SetTrigger("Hide");
             BackAnimator.SetTrigger("Open");
             BackButton.SetActive(false);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0f);
 
             BackPanel.SetActive(false);
             Panel.SetActive(false);

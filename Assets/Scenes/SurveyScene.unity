@@ -6560,7 +6560,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &241892153
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11619,7 +11619,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.3908, y: 212}
+  m_AnchoredPosition: {x: 0.00000047684, y: 104}
   m_SizeDelta: {x: 515.24, y: 98.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &273757054
@@ -12327,7 +12327,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4e-14, y: 276}
+  m_AnchoredPosition: {x: -4.999999, y: 93.98593}
   m_SizeDelta: {x: 506.4583, y: 72.0282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &344698420
@@ -12583,7 +12583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &363340165
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18643,8 +18643,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07538889, y: 0.89400005}
   m_AnchorMax: {x: 0.21516669, y: 0.957}
-  m_AnchoredPosition: {x: 320.07703, y: -557}
-  m_SizeDelta: {x: -2.11, y: 31.09}
+  m_AnchoredPosition: {x: 317, y: -321}
+  m_SizeDelta: {x: -2.11, y: 49.44}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &533726029
 GameObject:
@@ -18984,7 +18984,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07538889, y: 0.89400005}
   m_AnchorMax: {x: 0.21516669, y: 0.957}
-  m_AnchoredPosition: {x: 8, y: -465.15}
+  m_AnchoredPosition: {x: 8, y: -421}
   m_SizeDelta: {x: -2.11, y: 48.68}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &580000295
@@ -19519,23 +19519,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _questions:
   - type: 4
-    text: Hey, mijn naam is Fleur. Welkom bij de vragenlijst en leuk dat je meedoet!
+    text: Welkom bij de vragenlijst en leuk dat je meedoet!
     maxValue: 5
     _answers: []
     isRadioButton: 0
     userCanSendMessage: 0
     isShort: 0
-  - type: 4
-    text: Je kunt je antwoorden aanpassen voordat je ze opstuurt. Maak je daarom
-      geen zorgen om wat je invult!
-    maxValue: 0
-    _answers: []
-    isRadioButton: 0
-    userCanSendMessage: 1
-    isShort: 0
   - type: 2
-    text: Laten we beginnen met wat algemene vragen. Hoe maak je gebruik van de Oirschotsedijk?
-      Klik op 'volgende' om verder te gaan.
+    text: Hoe maak je gebruik van de Oirschotsedijk? Klik op 'volgende' om verder
+      te gaan.
     maxValue: 0
     _answers:
     - (Elektrische) Fiets
@@ -19548,16 +19540,6 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 1
     isShort: 0
-  - type: 2
-    text: Wat is je geslacht?
-    maxValue: 0
-    _answers:
-    - Man
-    - Vrouw
-    - Anders
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
   - type: 0
     text: Wat is je leeftijd?
     maxValue: 10
@@ -19569,83 +19551,6 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 0
     isShort: 1
-  - type: 2
-    text: Welke situatie is op dit moment het meest op jou van toepassing?
-    maxValue: 0
-    _answers:
-    - Student/scholier
-    - Werkend
-    - Thuis zonder werk
-    - Huisman of -vrouw
-    - Gepensioneerd
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Hoe vaak kom je hier?
-    maxValue: 0
-    _answers:
-    - Dagelijks
-    - Meerdere keren per week
-    - Meerdere keren per maand
-    - Sporadisch
-    - Dit is mijn eerste keer
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Wat is de reden dat je over de Oirschotsedijk komt?
-    maxValue: 0
-    _answers:
-    - Werk
-    - School
-    - Onderweg naar de stad/visite
-    - Sporten
-    isRadioButton: 0
-    userCanSendMessage: 1
-    isShort: 0
-  - type: 6
-    text: Je bent al bijna op de helft!
-    maxValue: 0
-    _answers:
-    - Pumptrack
-    - Freerun blocks
-    - Skatepark
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 4
-    text: Dit onderzoek is om te achterhalen wat de impact van de wegmarkeringen
-      zijn op beweeggedrag.
-    maxValue: 0
-    _answers:
-    - Pumptrack
-    - Freerun blocks
-    - Skatepark
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Zijn de nieuwe markeringen op het fietspad van de Oirschotsedijk je opgevallen?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer zeker
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: 'Wat vind je van de aangebrachte aanmoedigende teksten (zoals: ''je bent
-      er bijna'')?'
-    maxValue: 0
-    _answers:
-    - Ik vind het een leuke / nuttige toevoeging
-    - Ik vind het onnodig
-    - Het maakt me niet zoveel uit
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
   - type: 1
     text: Welk cijfer geef je de aangebrachte afstandsmarkering (zoals '1000 m')?
     maxValue: 10
@@ -19653,79 +19558,6 @@ MonoBehaviour:
     - Ik vind het een leuke / nuttige toevoeging
     - Ik vind het onnodig
     - Het maakt me niet zoveel uit
-    isRadioButton: 0
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Hebben deze nieuwe markeringen ertoe geleidt dat je vaker naar de Oirschotsedijk
-      bent gekomen?
-    maxValue: 0
-    _answers:
-    - Ja, ik er speciaal voor naar de Oirschotsedijk
-    - Nee, niet meer dan dat ik al deed
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Hebben de markeringen ertoe geleid dat je op bepaalde stukken bent gaan
-      versnellen?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Hebben de aanmoedigende teksten ertoe geleid dat je je meer gesteund voelde
-      tijdens het sporten?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 4
-    text: Je antwoorden helpen ons enorm!
-    maxValue: 0
-    _answers:
-    - Pumptrack
-    - Freerun blocks
-    - Skatepark
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 0
-    text: Heb je nog opmerkingen over de aangebrachte markering op de Oirschotsedijk?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
-    isRadioButton: 0
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 4
-    text: Het is voor ons ook waardevol om te weten waar een antwoord vandaan is
-      gekomen.
-    maxValue: 0
-    _answers:
-    - Pumptrack
-    - Freerun blocks
-    - Skatepark
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 3
-    text: Mogen wij weten waar je (ongeveer) woont?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
     isRadioButton: 0
     userCanSendMessage: 0
     isShort: 0
@@ -19741,7 +19573,8 @@ MonoBehaviour:
     userCanSendMessage: 0
     isShort: 0
   - type: 3
-    text: En waar zou je deze voorziening graag terug willen zien?
+    text: En waar zou je deze voorziening graag terug willen zien? Tik op de locatie
+      op de map.
     maxValue: 0
     _answers:
     - Pumptrack
@@ -26150,7 +25983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &931254865
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31778,8 +31611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -183.75, y: -723.86}
+  m_AnchoredPosition: {x: 0, y: 142.90002}
+  m_SizeDelta: {x: -183.75, y: -1009.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1025235091
 Animator:
@@ -32391,7 +32224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07538889, y: 0.89400005}
   m_AnchorMax: {x: 0.21516669, y: 0.957}
-  m_AnchoredPosition: {x: 318.07703, y: -465.15}
+  m_AnchoredPosition: {x: 318.07703, y: -421}
   m_SizeDelta: {x: -2.11, y: 48.68}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1107310732
@@ -33782,8 +33615,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 61}
-  m_SizeDelta: {x: -183.75, y: -463}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -183.75, y: -727.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1341721972
 Animator:
@@ -35842,7 +35675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.27e-13, y: 399}
+  m_AnchoredPosition: {x: 4.3908, y: 282}
   m_SizeDelta: {x: 506.4583, y: 72.0282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1567949055
@@ -36304,7 +36137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Laat ons niet in de steek!
+  m_text: Wilt u afsluiten?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -37320,7 +37153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.99607843, g: 0.36078432, b: 0.003921569, a: 0.4}
+  m_Color: {r: 0.99607843, g: 0.36078432, b: 0.003921569, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -37377,7 +37210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1754367703
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37893,8 +37726,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07538889, y: 0.89400005}
   m_AnchorMax: {x: 0.21516669, y: 0.957}
-  m_AnchoredPosition: {x: 234.05, y: -787}
-  m_SizeDelta: {x: 148.01, y: 24.58}
+  m_AnchoredPosition: {x: 234.05, y: -556}
+  m_SizeDelta: {x: 148.01, y: 34.75}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &1824722123
 GameObject:
@@ -37912,7 +37745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1824722124
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38118,7 +37951,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1837687432
 RectTransform:
   m_ObjectHideFlags: 0
@@ -38237,7 +38070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1856807700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43923,8 +43756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07538889, y: 0.89400005}
   m_AnchorMax: {x: 0.21516669, y: 0.957}
-  m_AnchoredPosition: {x: 10, y: -557}
-  m_SizeDelta: {x: -2.11, y: 31.09}
+  m_AnchoredPosition: {x: 6.9229736, y: -321.00003}
+  m_SizeDelta: {x: -2.11, y: 49.44}
   m_Pivot: {x: 1, y: 0}
 --- !u!1 &2085983059
 GameObject:
@@ -44378,7 +44211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.9135e-11, y: -139.1}
+  m_AnchoredPosition: {x: 9.9135e-11, y: -0.000015259}
   m_SizeDelta: {x: 616.25, y: 40.9912}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2145012695
