@@ -19548,16 +19548,6 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 1
     isShort: 0
-  - type: 2
-    text: Wat is je geslacht?
-    maxValue: 0
-    _answers:
-    - Man
-    - Vrouw
-    - Anders
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
   - type: 0
     text: Wat is je leeftijd?
     maxValue: 10
@@ -19569,41 +19559,6 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 0
     isShort: 1
-  - type: 2
-    text: Welke situatie is op dit moment het meest op jou van toepassing?
-    maxValue: 0
-    _answers:
-    - Student/scholier
-    - Werkend
-    - Thuis zonder werk
-    - Huisman of -vrouw
-    - Gepensioneerd
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Hoe vaak kom je hier?
-    maxValue: 0
-    _answers:
-    - Dagelijks
-    - Meerdere keren per week
-    - Meerdere keren per maand
-    - Sporadisch
-    - Dit is mijn eerste keer
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Wat is de reden dat je over de Oirschotsedijk komt?
-    maxValue: 0
-    _answers:
-    - Werk
-    - School
-    - Onderweg naar de stad/visite
-    - Sporten
-    isRadioButton: 0
-    userCanSendMessage: 1
-    isShort: 0
   - type: 6
     text: Je bent al bijna op de helft!
     maxValue: 0
@@ -19625,27 +19580,6 @@ MonoBehaviour:
     isRadioButton: 1
     userCanSendMessage: 0
     isShort: 0
-  - type: 2
-    text: Zijn de nieuwe markeringen op het fietspad van de Oirschotsedijk je opgevallen?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer zeker
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: 'Wat vind je van de aangebrachte aanmoedigende teksten (zoals: ''je bent
-      er bijna'')?'
-    maxValue: 0
-    _answers:
-    - Ik vind het een leuke / nuttige toevoeging
-    - Ik vind het onnodig
-    - Het maakt me niet zoveel uit
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
   - type: 1
     text: Welk cijfer geef je de aangebrachte afstandsmarkering (zoals '1000 m')?
     maxValue: 10
@@ -19656,38 +19590,6 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 0
     isShort: 0
-  - type: 2
-    text: Hebben deze nieuwe markeringen ertoe geleidt dat je vaker naar de Oirschotsedijk
-      bent gekomen?
-    maxValue: 0
-    _answers:
-    - Ja, ik er speciaal voor naar de Oirschotsedijk
-    - Nee, niet meer dan dat ik al deed
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Hebben de markeringen ertoe geleid dat je op bepaalde stukken bent gaan
-      versnellen?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 2
-    text: Hebben de aanmoedigende teksten ertoe geleid dat je je meer gesteund voelde
-      tijdens het sporten?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
   - type: 4
     text: Je antwoorden helpen ons enorm!
     maxValue: 0
@@ -19696,37 +19598,6 @@ MonoBehaviour:
     - Freerun blocks
     - Skatepark
     isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 0
-    text: Heb je nog opmerkingen over de aangebrachte markering op de Oirschotsedijk?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
-    isRadioButton: 0
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 4
-    text: Het is voor ons ook waardevol om te weten waar een antwoord vandaan is
-      gekomen.
-    maxValue: 0
-    _answers:
-    - Pumptrack
-    - Freerun blocks
-    - Skatepark
-    isRadioButton: 1
-    userCanSendMessage: 0
-    isShort: 0
-  - type: 3
-    text: Mogen wij weten waar je (ongeveer) woont?
-    maxValue: 0
-    _answers:
-    - Ja
-    - Nee
-    - Weet ik niet meer
-    isRadioButton: 0
     userCanSendMessage: 0
     isShort: 0
   - type: 2
