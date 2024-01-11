@@ -19612,7 +19612,8 @@ MonoBehaviour:
     userCanSendMessage: 0
     isShort: 0
   - type: 3
-    text: En waar zou je deze voorziening graag terug willen zien?
+    text: En waar zou je deze voorziening graag terug willen zien? Beweeg door de
+      map en tik op de locatie.
     maxValue: 0
     _answers:
     - Pumptrack
