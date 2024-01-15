@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AddMapMarker : MonoBehaviour
 {
     [Header("New marker attributes")]
     [SerializeField] GameObject NewMarker;
     [SerializeField] Transform ParentObject;
+    [SerializeField] Button MapButton;
 
     bool canPlace;
 
@@ -17,6 +19,8 @@ public class AddMapMarker : MonoBehaviour
     {
         if (canPlace)
         {
+            MapButton.interactable = false;
+
             Vector2 newPosition = transform.InverseTransformPoint(Camera.main.ScreenToWorldPoint(Input.mousePosition));
             newPosition.y += 1065;
             newPosition.x -= 1490;

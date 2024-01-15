@@ -3260,6 +3260,7 @@ MonoBehaviour:
   IdeaAnimator: {fileID: 212586828}
   PositionSelectionAnimator: {fileID: 1206845409}
   SmokeEffect: {fileID: 2147062042}
+  MapButton: {fileID: 828911112}
   IdeaObjectRect: {fileID: 212586824}
   IdeaObject: {fileID: 212586824}
   NewParent: {fileID: 1668844444}
@@ -12091,7 +12092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &501147605
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14352,6 +14353,7 @@ MonoBehaviour:
   IdeaAnimator: {fileID: 670430025}
   PositionSelectionAnimator: {fileID: 1206845409}
   SmokeEffect: {fileID: 1699334325}
+  MapButton: {fileID: 828911112}
   IdeaObjectRect: {fileID: 670430021}
   IdeaObject: {fileID: 670430021}
   NewParent: {fileID: 2042364439}
@@ -16742,7 +16744,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 828911110}
   m_OnClick:
     m_PersistentCalls:
@@ -21010,6 +21012,7 @@ MonoBehaviour:
   IdeaAnimator: {fileID: 1082695267}
   PositionSelectionAnimator: {fileID: 1206845409}
   SmokeEffect: {fileID: 239784646}
+  MapButton: {fileID: 828911112}
   IdeaObjectRect: {fileID: 1082695263}
   IdeaObject: {fileID: 1082695263}
   NewParent: {fileID: 704266863}
@@ -23502,6 +23505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NewMarker: {fileID: 4459078837472896253, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
   ParentObject: {fileID: 1686986673}
+  MapButton: {fileID: 828911112}
 --- !u!1 &1315540772
 GameObject:
   m_ObjectHideFlags: 0
@@ -47950,6 +47954,7 @@ MonoBehaviour:
   IdeaAnimator: {fileID: 6001678281085531045}
   PositionSelectionAnimator: {fileID: 1206845409}
   SmokeEffect: {fileID: 1574348019}
+  MapButton: {fileID: 828911112}
   IdeaObjectRect: {fileID: 5093017942566328068}
   IdeaObject: {fileID: 5093017942566328068}
   NewParent: {fileID: 857249442}

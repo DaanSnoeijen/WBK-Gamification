@@ -19604,7 +19604,7 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 1
     isShort: 0
-  - type: 6
+  - type: 4
     text: Je bent al bijna op de helft!
     maxValue: 0
     _answers:

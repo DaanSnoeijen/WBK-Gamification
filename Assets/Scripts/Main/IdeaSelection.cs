@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IdeaSelection : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class IdeaSelection : MonoBehaviour
     [SerializeField] Animator IdeaAnimator;
     [SerializeField] Animator PositionSelectionAnimator;
     [SerializeField] ParticleSystem SmokeEffect;
+    [SerializeField] Button MapButton;
 
     [Header("Idea object parenting")]
     [SerializeField] RectTransform IdeaObjectRect;
@@ -19,6 +21,8 @@ public class IdeaSelection : MonoBehaviour
 
     IEnumerator ISelectIdea()
     {
+        MapButton.interactable = true;
+
         Vector2 oldPosition = IdeaObjectRect.anchoredPosition;
         IdeaObject.SetParent(NewParent);
         IdeaAnimator.SetTrigger("Select");
