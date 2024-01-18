@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +8,11 @@ public class IdeaSelection : MonoBehaviour
 {
     [Header("Idea animation")]
     [SerializeField] Animator IdeaAnimator;
-    [SerializeField] Animator PositionSelectionAnimator;
+    [SerializeField] Animator DescriptionAnimator;
+
+    [Header("Other")]
     [SerializeField] ParticleSystem SmokeEffect;
-    [SerializeField] Button MapButton;
+    [SerializeField] TMP_InputField InputField;
 
     [Header("Idea object parenting")]
     [SerializeField] RectTransform IdeaObjectRect;
@@ -21,15 +24,14 @@ public class IdeaSelection : MonoBehaviour
 
     IEnumerator ISelectIdea()
     {
-        MapButton.interactable = true;
-
         Vector2 oldPosition = IdeaObjectRect.anchoredPosition;
         IdeaObject.SetParent(NewParent);
         IdeaAnimator.SetTrigger("Select");
 
         yield return new WaitForSeconds(0.7f);
         SmokeEffect.Play();
-        PositionSelectionAnimator.SetTrigger("Show");
+        DescriptionAnimator.SetTrigger("Show");
+        InputField.Select();
 
         yield return new WaitForSeconds(3f);
         IdeaObject.SetParent(OldParent);

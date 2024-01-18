@@ -15,6 +15,14 @@ public class PanelLogic : MonoBehaviour
 
     public void ShowCloseScreen(bool show) { StartCoroutine(IShowCloseScreen(show)); }
 
+    public void ShowCloseScreenNoFocuspanel(bool show) { StartCoroutine(IShowCloseScreenNoFocuspanel(show)); }
+
+    public void ShowFocuspanel(bool show) 
+    { 
+        if (show) BackAnimator.SetTrigger("Close"); 
+        else BackAnimator.SetTrigger("Open");
+    }
+
     IEnumerator IShowCloseScreen(bool show)
     {
         if (show)
@@ -31,6 +39,28 @@ public class PanelLogic : MonoBehaviour
         {
             PanelAnimator.SetTrigger("Hide");
             BackAnimator.SetTrigger("Open");
+            BackButton.SetActive(false);
+            yield return new WaitForSeconds(1f);
+
+            BackPanel.SetActive(false);
+            Panel.SetActive(false);
+        }
+    }
+
+    IEnumerator IShowCloseScreenNoFocuspanel(bool show)
+    {
+        if (show)
+        {
+            BackPanel.SetActive(true);
+            Panel.SetActive(true);
+            PanelAnimator.SetTrigger("Show");
+
+            yield return new WaitForSeconds(1f);
+            BackButton.SetActive(true);
+        }
+        else
+        {
+            PanelAnimator.SetTrigger("Hide");
             BackButton.SetActive(false);
             yield return new WaitForSeconds(1f);
 
