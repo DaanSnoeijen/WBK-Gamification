@@ -2,8 +2,6 @@ using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class UserMapLogic : MonoBehaviour
 {
@@ -12,10 +10,14 @@ public class UserMapLogic : MonoBehaviour
 
     [Header("Move instructions for map")]
     [SerializeField] GameObject Instructions;
+    [SerializeField] Animator MapAnimator;
+    [SerializeField] Animator ButtonAnimator;
 
     bool canNextMessage = true;
 
     public void SetInstructions(bool show) { Instructions.SetActive(show); }
+
+    public void SetMapSize(bool big) { MapAnimator.SetTrigger(big.ToString()); }
 
     public void SetPointer()
     {
@@ -24,10 +26,23 @@ public class UserMapLogic : MonoBehaviour
         position.x -= 567;
         Pointer.anchoredPosition = position;
 
+        ButtonAnimator.SetTrigger("Show");
+    }
+
+    public void NextMessage() { StartCoroutine(INextMessage()); }
+
+    IEnumerator INextMessage()
+    {
+        ButtonAnimator.SetTrigger("Hide");
+        SetMapSize(false);
+
         if (canNextMessage)
         {
             GetComponentInParent<NextMessageLinker>().NextMessage();
             canNextMessage = false;
         }
+
+        yield return new WaitForSeconds(1f);
+        SetInstructions(true);
     }
 }
