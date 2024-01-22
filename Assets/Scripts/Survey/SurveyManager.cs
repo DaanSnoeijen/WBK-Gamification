@@ -27,8 +27,8 @@ public class SurveyManager : MonoBehaviour
 
     float questionId;
 
-    float waitInBetween = 0.5f;
-    float waitTyping = 1.2f;
+    float waitInBetween = 1f;
+    float waitTyping = 2f;
 
     bool choiceOpen;
 
