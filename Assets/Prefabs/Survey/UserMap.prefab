@@ -895,6 +895,7 @@ GameObject:
   - component: {fileID: 2851815047120184498}
   - component: {fileID: 2963174909422261855}
   - component: {fileID: 5754753634172235805}
+  - component: {fileID: 5650476867280357023}
   m_Layer: 5
   m_Name: MoveInstructions
   m_TagString: Untagged
@@ -1030,6 +1031,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!95 &5650476867280357023
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7652469010359108641}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b8cdf9da67a9b3418530fffe29b3baf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7767703565707299676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1242,7 @@ MonoBehaviour:
   Instructions: {fileID: 7652469010359108641}
   MapAnimator: {fileID: 2225994747094328630}
   ButtonAnimator: {fileID: 4156668347887247951}
+  InstructionAnimator: {fileID: 5650476867280357023}
 --- !u!1 &9120158216510981755
 GameObject:
   m_ObjectHideFlags: 0

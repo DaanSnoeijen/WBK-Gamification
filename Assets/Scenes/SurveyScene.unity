@@ -19497,7 +19497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _questions:
-  - type: 3
+  - type: 4
     text: Hey, mijn naam is Fleur. Welkom bij de vragenlijst en leuk dat je meedoet!
     maxValue: 5
     _answers: []
@@ -19512,7 +19512,7 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 1
     isShort: 0
-  - type: 2
+  - type: 3
     text: Laten we beginnen met wat algemene vragen. Hoe maak je gebruik van de Oirschotsedijk?
       Klik op 'volgende' om verder te gaan.
     maxValue: 0

@@ -12,10 +12,14 @@ public class UserMapLogic : MonoBehaviour
     [SerializeField] GameObject Instructions;
     [SerializeField] Animator MapAnimator;
     [SerializeField] Animator ButtonAnimator;
+    [SerializeField] Animator InstructionAnimator;
 
     bool canNextMessage = true;
 
-    public void SetInstructions(bool show) { Instructions.SetActive(show); }
+    public void SetInstructions(bool show) 
+    {
+        Instructions.SetActive(show); 
+    }
 
     public void SetMapSize(bool big) { MapAnimator.SetTrigger(big.ToString()); }
 
@@ -44,5 +48,6 @@ public class UserMapLogic : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
         SetInstructions(true);
+        InstructionAnimator.SetTrigger("Show");
     }
 }
