@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class MapZooming : MonoBehaviour
 {
@@ -17,10 +18,13 @@ public class MapZooming : MonoBehaviour
     float zoomMin = 1f;
     float zoomMax = 3f;
 
+    float markerZoom = 2.5f;
+
     private void LateUpdate()
     {
         Zoom();
     }
+    public void SetMarkerZoom() { transform.localScale = new Vector3(markerZoom, markerZoom, transform.localScale.z); }
 
     void Zoom()
     {

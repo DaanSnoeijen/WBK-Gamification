@@ -19512,7 +19512,7 @@ MonoBehaviour:
     isRadioButton: 0
     userCanSendMessage: 1
     isShort: 0
-  - type: 3
+  - type: 2
     text: Laten we beginnen met wat algemene vragen. Hoe maak je gebruik van de Oirschotsedijk?
       Klik op 'volgende' om verder te gaan.
     maxValue: 0

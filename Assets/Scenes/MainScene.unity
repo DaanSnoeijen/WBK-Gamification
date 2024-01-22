@@ -11346,6 +11346,38 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1309156168}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FocusOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CameraFocus, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1374082875}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.RectTransform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1837328040362003932, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
       propertyPath: m_Name
       value: Marker (1)
@@ -30312,6 +30344,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: NewMarker
       objectReference: {fileID: 0}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1309156168}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FocusOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CameraFocus, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1957441952}
+    - target: {fileID: 4718792529418856473, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.RectTransform, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
 --- !u!1 &1119606087
@@ -34687,6 +34751,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1309156166}
   - component: {fileID: 1309156167}
+  - component: {fileID: 1309156168}
   m_Layer: 5
   m_Name: Content
   m_TagString: Untagged
@@ -34732,6 +34797,20 @@ MonoBehaviour:
   NewMarker: {fileID: 4459078837472896253, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
   ParentObject: {fileID: 1686986673}
   MapButton: {fileID: 828911112}
+--- !u!114 &1309156168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309156165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a89827bef83bf342aca085f9ea4a719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RectPos: {fileID: 1309156166}
+  Zooming: {fileID: 1701876113}
 --- !u!1 &1315540772
 GameObject:
   m_ObjectHideFlags: 0
@@ -55687,6 +55766,38 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1309156168}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FocusOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CameraFocus, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 947354104}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.RectTransform, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1837328040362003932, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
       propertyPath: m_Name
       value: Marker (2)
@@ -55920,6 +56031,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953659492}
   m_CullTransparentMesh: 1
+--- !u!224 &1957441952 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4718792529418856464, guid: 974c1c193a13bed4ebe8d0615dc038c3, type: 3}
+  m_PrefabInstance: {fileID: 1116286076}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1961578573
 GameObject:
   m_ObjectHideFlags: 0
@@ -65299,6 +65415,38 @@ PrefabInstance:
     - target: {fileID: 1837328040362003922, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1309156168}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FocusOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: CameraFocus, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1951412647}
+    - target: {fileID: 1837328040362003924, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.RectTransform, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1837328040362003932, guid: e8772f5b146333144bb4806c5d6a52fe, type: 3}
       propertyPath: m_Name
