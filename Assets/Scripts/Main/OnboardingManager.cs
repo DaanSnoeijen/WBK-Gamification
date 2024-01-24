@@ -5,11 +5,18 @@ using UnityEngine;
 
 public class OnboardingManager : MonoBehaviour
 {
+    [Header("Onboarding screens")]
     [SerializeField] List<GameObject> ForeGrounds = new List<GameObject>();
 
     [Header("Progressbar settings")]
     [SerializeField] GameObject MainDot;
     [SerializeField] Animator DotAnimator;
+    [SerializeField] Animator ButtonLAnimator;
+    [SerializeField] Animator ButtonRAnimator;
+
+    [Header("Close onboarding items")]
+    [SerializeField] Animator PanelAnimator;
+    [SerializeField] GameObject Screens;
 
     int dotStep = 0;
 
@@ -19,7 +26,18 @@ public class OnboardingManager : MonoBehaviour
         else if (!right && dotStep > 0) dotStep--;
         else return;
 
+        if (dotStep == 0) ButtonLAnimator.SetTrigger("Hide");
+        else if (right && dotStep == 1) ButtonLAnimator.SetTrigger("Show");
+        if (dotStep == ForeGrounds.Count - 1) ButtonRAnimator.SetTrigger("Hide");
+        else if (!right && dotStep == ForeGrounds.Count - 2) ButtonRAnimator.SetTrigger("Show");
+
         StartCoroutine(IMoveMainDot(right));
+    }
+
+    public void CloseOnboarding()
+    {
+        PanelAnimator.SetTrigger("Hide");
+        Screens.SetActive(false);
     }
     
     IEnumerator IMoveMainDot(bool right)
