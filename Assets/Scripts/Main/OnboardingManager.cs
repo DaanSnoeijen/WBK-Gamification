@@ -6,7 +6,7 @@ using UnityEngine;
 public class OnboardingManager : MonoBehaviour
 {
     [Header("Onboarding screens")]
-    [SerializeField] List<GameObject> ForeGrounds = new List<GameObject>();
+    [SerializeField] List<OnboardingItem> Items;
 
     [Header("Progressbar settings")]
     [SerializeField] GameObject MainDot;
@@ -22,14 +22,14 @@ public class OnboardingManager : MonoBehaviour
 
     public void ChangeDot(bool right)
     {
-        if (right && dotStep < ForeGrounds.Count - 1) dotStep++;
+        if (right && dotStep < Items.Count - 1) dotStep++;
         else if (!right && dotStep > 0) dotStep--;
         else return;
 
         if (dotStep == 0) ButtonLAnimator.SetTrigger("Hide");
         else if (right && dotStep == 1) ButtonLAnimator.SetTrigger("Show");
-        if (dotStep == ForeGrounds.Count - 1) ButtonRAnimator.SetTrigger("Hide");
-        else if (!right && dotStep == ForeGrounds.Count - 2) ButtonRAnimator.SetTrigger("Show");
+        if (dotStep == Items.Count - 1) ButtonRAnimator.SetTrigger("Hide");
+        else if (!right && dotStep == Items.Count - 2) ButtonRAnimator.SetTrigger("Show");
 
         StartCoroutine(IMoveMainDot(right));
     }
