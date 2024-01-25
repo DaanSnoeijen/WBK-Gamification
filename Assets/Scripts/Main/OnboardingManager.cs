@@ -13,6 +13,7 @@ public class OnboardingManager : MonoBehaviour
     [SerializeField] GameObject MainDot;
     [SerializeField] TextMeshProUGUI Description;
     [SerializeField] Animator FocusAnimator;
+    [SerializeField] Animator ArrowAnimator;
     [SerializeField] Animator DotAnimator;
     [SerializeField] Animator ButtonLAnimator;
     [SerializeField] Animator ButtonRAnimator;
@@ -29,11 +30,13 @@ public class OnboardingManager : MonoBehaviour
         {
             dotStep++;
             FocusAnimator.SetTrigger("Next");
+            ArrowAnimator.SetTrigger("Next");
         }
         else if (!right && dotStep > 0)
         {
             dotStep--;
             FocusAnimator.SetTrigger("Previous");
+            ArrowAnimator.SetTrigger("Previous");
         }
         else return;
 
