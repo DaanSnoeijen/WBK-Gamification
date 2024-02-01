@@ -50,7 +50,7 @@ public class FinishButtonLogic : MonoBehaviour
 
             if (animPlayed) yield break;
 
-            CoinBarLogic.SetProgressBar(UserProfile.ReturnPrizePercent());
+            //CoinBarLogic.SetProgressBar(UserProfile.ReturnPrizePercent());
             animPlayed = true;
             //StarAnimation.StartAnimation();
         }

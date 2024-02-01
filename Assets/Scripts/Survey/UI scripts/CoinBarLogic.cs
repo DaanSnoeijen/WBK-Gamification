@@ -19,7 +19,7 @@ public class CoinBarLogic : MonoBehaviour
 
     int loopRate = 80;
 
-    public void SetProgressBar(float newValue) { StartCoroutine(IProgressBarAnim(newValue)); }
+    //public void SetProgressBar(float newValue) { StartCoroutine(IProgressBarAnim(newValue)); }
 
     IEnumerator IProgressBarAnim(float newValue)
     {
